@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { MainLayout } from "./layouts/MainLayout";
+// import { MainLayout } from "./layouts/MainLayout";
 import { DashboardLayout } from "./layouts/DashboardLayout";
-import LandingPage from "./pages/LandingPage";
+// import LandingPage from "./pages/LandingPage";
 import Dashboard from "./pages/Dashboard";
 import Classes from "./pages/Classes";
 import Documents from "./pages/Documents";
@@ -15,10 +15,10 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         {/* Landing Page Route */}
-        <Route path="/" element={<MainLayout><LandingPage /></MainLayout>} />
+        {/* <Route path="/" element={<MainLayout><LandingPage /></MainLayout>} /> */}
         
         {/* Dashboard Routes */}
-        <Route path="/dashboard" element={<DashboardLayout><Dashboard /></DashboardLayout>} />
+        <Route path="/" element={<DashboardLayout><Dashboard /></DashboardLayout>} />
         <Route path="/classes" element={<DashboardLayout><Classes /></DashboardLayout>} />
         <Route path="/documents" element={<DashboardLayout><Documents /></DashboardLayout>} />
         <Route path="/documents/:id" element={<DashboardLayout><DocumentAnalysis /></DashboardLayout>} />
