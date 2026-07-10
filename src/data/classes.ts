@@ -1,0 +1,40 @@
+import type { Class } from "@/types/Class";
+
+export const mockClasses: Class[] = [
+  {
+    id: "cls_a13f52bc",
+    name: "9th Grade A",
+    subject: "Mathematics",
+    grade: "9th Grade",
+    students: 28,
+    averageLevel: "Medium",
+    difficulties: ["Fractions", "Equations"],
+    calendar: "Morning",
+    description: "Regular classroom with mixed skill levels.",
+    createdAt: "2024-01-15T08:00:00Z",
+  },
+  {
+    id: "cls_b73ca112",
+    name: "10th Grade B",
+    subject: "History",
+    grade: "10th Grade",
+    students: 32,
+    averageLevel: "High",
+    difficulties: ["Essay Writing", "Critical Analysis"],
+    calendar: "Afternoon",
+    description: "Advanced class focusing on modern history.",
+    createdAt: "2024-01-15T08:00:00Z",
+  },
+  {
+    id: "cls_98fa12bc",
+    name: "8th Grade C",
+    subject: "Science",
+    grade: "8th Grade",
+    students: 25,
+    averageLevel: "Low",
+    difficulties: ["Laboratory Safety", "Scientific Method"],
+    calendar: "Morning",
+    description: "Introductory science class with hands-on experiments.",
+    createdAt: "2024-01-15T08:00:00Z",
+  },
+];
