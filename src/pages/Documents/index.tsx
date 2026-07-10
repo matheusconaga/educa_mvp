@@ -15,7 +15,7 @@ export default function Documents() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [documents, setDocuments] = useState(mockDocuments);
   const [showUpload, setShowUpload] = useState(true);
-  
+
   const {
     currentStep,
     progress,
@@ -37,15 +37,15 @@ export default function Documents() {
 
     try {
       const docId = await uploadDocument(selectedFile);
-      
+
       // Refresh documents list
       const updatedDocs = await documentService.getAll();
       setDocuments(updatedDocs);
-      
+
       setSelectedFile(null);
       reset();
       setShowUpload(false);
-      
+
       // Navigate to analysis page
       navigate(`/documents/${docId}`);
     } catch (error) {
@@ -97,24 +97,26 @@ export default function Documents() {
         )}
       </div>
 
-      {showUpload ? (
-        <div className="space-y-6">
-          <FileUpload
-            onFileSelect={handleFileSelect}
-            selectedFile={selectedFile}
-            onClear={handleClear}
-          />
-          {selectedFile && (
-            <div className="flex justify-end">
-              <Button variant="primary" onClick={handleUpload}>
-                Upload & Analyze
-              </Button>
-            </div>
-          )}
-        </div>
-      ) : null}
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 items-stretch">
+        {showUpload ? (
+          <div className="space-y-6">
+            <FileUpload
+              onFileSelect={handleFileSelect}
+              selectedFile={selectedFile}
+              onClear={handleClear}
+            />
+            {selectedFile && (
+              <div className="flex justify-end">
+                <Button variant="primary" onClick={handleUpload}>
+                  Upload & Analyze
+                </Button>
+              </div>
+            )}
+          </div>
+        ) : null}
 
-      <DocumentHistory documents={documents} onDelete={handleDelete} />
+        <DocumentHistory documents={documents} onDelete={handleDelete} />
+      </div>
     </div>
   );
 }

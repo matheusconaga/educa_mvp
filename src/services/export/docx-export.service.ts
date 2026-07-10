@@ -20,7 +20,6 @@ export class DOCXExportService {
               text: "EducAssist",
               heading: HeadingLevel.HEADING_3,
               spacing: { after: 200 },
-              color: "666666",
             }),
 
             // Title

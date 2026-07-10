@@ -7,7 +7,7 @@ export const mockLessonPlans: LessonPlan[] = [
     documentId: "doc_83df12fa",
     title: "Introduction to Fractions",
     objective: "Students will understand the concept of fractions and be able to identify and compare simple fractions.",
-    methodology: "Interactive lecture with visual aids, hands-on activities, and group work.",
+    methodology: ["Interactive lecture with visual aids", "Hands-on activities", "Group work"],
     activities: [
       "Visual fraction demonstration using pizza slices",
       "Group activity: Fraction matching game",
@@ -26,7 +26,7 @@ export const mockLessonPlans: LessonPlan[] = [
     documentId: "doc_92bc34ef",
     title: "World War II: Causes and Consequences",
     objective: "Students will analyze the major causes of World War II and understand its global impact.",
-    methodology: "Document analysis, group discussions, and timeline construction.",
+    methodology: ["Document analysis", "Group discussions", "Timeline construction"],
     activities: [
       "Primary source document analysis",
       "Timeline creation activity",
@@ -45,7 +45,7 @@ export const mockLessonPlans: LessonPlan[] = [
     documentId: "doc_13cd45gh",
     title: "Scientific Method Introduction",
     objective: "Students will understand the steps of the scientific method and apply them to a simple experiment.",
-    methodology: "Demonstration, guided practice, and independent investigation.",
+    methodology: ["Demonstration", "Guided practice", "Independent investigation"],
     activities: [
       "Scientific method overview presentation",
       "Class experiment: Plant growth observation",
@@ -64,7 +64,7 @@ export const mockLessonPlans: LessonPlan[] = [
     documentId: "doc_83df12fa",
     title: "Solving Linear Equations",
     objective: "Students will learn to solve one-step and two-step linear equations.",
-    methodology: "Direct instruction, guided practice, and peer teaching.",
+    methodology: ["Direct instruction", "Guided practice", "Peer teaching"],
     activities: [
       "Equation balancing demonstration",
       "Step-by-step practice problems",
