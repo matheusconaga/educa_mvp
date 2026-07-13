@@ -9,6 +9,8 @@ import DocumentAnalysis from "./pages/Documents/[id]";
 import LessonPlans from "./pages/LessonPlans";
 import Activities from "./pages/Activities";
 import Analytics from "./pages/Analytics";
+import Settings from "./pages/Settings";
+import Support from "./pages/Support";
 
 export default function App() {
   return (
@@ -25,6 +27,8 @@ export default function App() {
         <Route path="/lesson-plans" element={<DashboardLayout><LessonPlans /></DashboardLayout>} />
         <Route path="/activities" element={<DashboardLayout><Activities /></DashboardLayout>} />
         <Route path="/analytics" element={<DashboardLayout><Analytics /></DashboardLayout>} />
+        <Route path="/settings" element={<DashboardLayout><Settings /></DashboardLayout>} />
+        <Route path="/support" element={<DashboardLayout><Support /></DashboardLayout>} />
         
         {/* Catch all - redirect to landing page */}
         <Route path="*" element={<Navigate to="/" replace />} />
