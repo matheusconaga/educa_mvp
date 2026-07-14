@@ -184,7 +184,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   setHelpOpen(false);
                   setUserMenuOpen(false);
                 }}
-                className="relative p-2.5 rounded-xl hover:bg-muted/50 transition-all duration-200 text-muted-foreground hover:text-foreground group min-h-[44px] min-w-[44px] md:min-h-0 md:min-w-0"
+                className="hover:cursor-pointer relative p-2.5 rounded-xl hover:bg-muted/50 transition-all duration-200 text-muted-foreground hover:text-foreground group min-h-[44px] min-w-[44px] md:min-h-0 md:min-w-0"
                 aria-label="Notifications"
               >
                 <Bell className="h-5 w-5 transition-transform group-hover:scale-110" />
@@ -201,7 +201,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   setNotificationOpen(false);
                   setUserMenuOpen(false);
                 }}
-                className="p-2.5 rounded-xl hover:bg-muted/50 transition-all duration-200 text-muted-foreground hover:text-foreground group min-h-[44px] min-w-[44px] md:min-h-0 md:min-w-0"
+                className="hover:cursor-pointer p-2.5 rounded-xl hover:bg-muted/50 transition-all duration-200 text-muted-foreground hover:text-foreground group min-h-[44px] min-w-[44px] md:min-h-0 md:min-w-0"
                 aria-label="Help"
               >
                 <HelpCircle className="h-5 w-5 transition-transform group-hover:scale-110" />
@@ -217,7 +217,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   setNotificationOpen(false);
                   setHelpOpen(false);
                 }}
-                className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 hover:bg-primary/20 transition-all duration-200 ring-2 ring-transparent hover:ring-primary/20 min-h-[44px] min-w-[44px] md:min-h-0 md:min-w-0"
+                className="hover:cursor-pointer flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-200 ring-2 ring-transparent hover:ring-primary/20 min-h-[44px] min-w-[44px] md:min-h-0 md:min-w-0"
                 aria-label="User menu"
               >
                 <span className="text-sm font-semibold text-primary">M</span>

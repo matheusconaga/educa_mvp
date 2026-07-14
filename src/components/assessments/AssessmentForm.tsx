@@ -125,10 +125,10 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                 type="button"
                 onClick={() => setFormData({ ...formData, assessmentType: type })}
                 className={cn(
-                  "flex-1 px-4 py-2 rounded-xl font-medium transition-colors",
+                  "hover:cursor-pointer flex-1 px-4 py-2 rounded-xl font-medium transition-colors",
                   formData.assessmentType === type
-                    ? "bg-primary text-white"
-                    : "bg-muted text-foreground hover:bg-muted/80"
+                    ? "bg-primary text-white "
+                    : "bg-muted text-foreground hover:bg-primary/20"
                 )}
               >
                 {type === "test" ? "Test / Quiz" : type.charAt(0).toUpperCase() + type.slice(1)}
@@ -226,10 +226,10 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                     type="button"
                     onClick={() => setFormData({ ...formData, difficulty: diff.value })}
                     className={cn(
-                      "flex-1 px-3 py-2 rounded-xl text-sm font-medium transition-colors",
+                      "hover:cursor-pointer flex-1 px-3 py-2 rounded-xl text-sm font-medium transition-colors",
                       formData.difficulty === diff.value
                         ? "bg-primary text-white"
-                        : "bg-muted text-foreground hover:bg-muted/80"
+                        : "bg-muted text-foreground hover:bg-primary/20"
                     )}
                   >
                     {diff.label}
@@ -285,10 +285,10 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                 type="button"
                 onClick={() => toggleQuestionType(type.value)}
                 className={cn(
-                  "px-3 py-1.5 rounded-full text-sm font-medium transition-colors",
+                  "hover:cursor-pointer px-3 py-1.5 rounded-full text-sm font-medium transition-colors",
                   formData.questionTypes.includes(type.value)
                     ? "bg-primary text-white"
-                    : "bg-muted text-foreground hover:bg-muted/80"
+                    : "bg-muted text-foreground hover:bg-primary/20"
                 )}
               >
                 {type.label}
@@ -309,10 +309,10 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                   type="button"
                   onClick={() => setFormData({ ...formData, activityType: type.value })}
                   className={cn(
-                    "px-3 py-1.5 rounded-full text-sm font-medium transition-colors",
+                    "hover:cursor-pointer px-3 py-1.5 rounded-full text-sm font-medium transition-colors",
                     formData.activityType === type.value
                       ? "bg-primary text-white"
-                      : "bg-muted text-foreground hover:bg-muted/80"
+                      : "bg-muted text-foreground hover:bg-primary/20"
                   )}
                 >
                   {type.label}
