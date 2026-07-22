@@ -17,7 +17,7 @@ export type HistoryType =
   | "analysis"
   | "error";
 
-export type HistoryStatus = "Completed" | "In Progress" | "Failed";
+export type HistoryStatus = "Concluído" | "Em Andamento" | "Falhou";
 
 export interface HistoryItem {
   id: string;
@@ -50,7 +50,7 @@ const typeLabels = {
 };
 
 const statusStyles = {
-  Completed: {
+  Concluído: {
     border: "border-green-200",
     bg: "bg-green-50/40",
     icon: "bg-green-100 text-green-600",
@@ -58,7 +58,7 @@ const statusStyles = {
     badge: "bg-green-100 text-green-700",
   },
 
-  "In Progress": {
+  "Em Andamento": {
     border: "border-yellow-200",
     bg: "bg-yellow-50/40",
     icon: "bg-yellow-100 text-yellow-600",
@@ -66,7 +66,7 @@ const statusStyles = {
     badge: "bg-yellow-100 text-yellow-700",
   },
 
-  Failed: {
+  Falhou: {
     border: "border-red-200",
     bg: "bg-red-50/40",
     icon: "bg-red-100 text-red-600",
@@ -173,7 +173,7 @@ export function RecentHistory({ items }: RecentHistoryProps) {
           {visibleItems.map((item) => {
             const style =
               statusStyles[item.status] ??
-              statusStyles.Completed;
+              statusStyles.Concluído;
 
             const Icon = typeIcons[item.type];
 
