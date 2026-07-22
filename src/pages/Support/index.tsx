@@ -17,26 +17,26 @@ export default function Support() {
   };
 
   const popularArticles = [
-    { title: "How to generate a lesson plan", category: "Getting Started" },
-    { title: "Understanding AI recommendations", category: "Analytics" },
-    { title: "Managing your classes", category: "Classes" },
-    { title: "Exporting documents", category: "Documents" },
+    { title: "Como gerar um plano de aula", category: "Primeiros Passos" },
+    { title: "Entendendo recomendações da IA", category: "Inteligência Educacional" },
+    { title: "Gerenciando suas turmas", category: "Turmas" },
+    { title: "Exportando documentos", category: "Documentos" },
   ];
 
   const faqs = [
-    { question: "How do I create a new class?", answer: "Go to the Classes page and click 'New Class' to create a new class." },
-    { question: "Can I import students from a spreadsheet?", answer: "Yes, you can import students using the Import Students modal which supports CSV files." },
-    { question: "How do I export lesson plans?", answer: "You can export lesson plans to PDF or DOCX format from the Lesson Plans page." },
-    { question: "What are AI recommendations?", answer: "AI recommendations are personalized suggestions based on your class performance and learning patterns." },
+    { question: "Como criar uma nova turma?", answer: "Vá para a página Turmas e clique em 'Nova Turma' para criar uma nova turma." },
+    { question: "Posso importar alunos de uma planilha?", answer: "Sim, você pode importar alunos usando o modal Importar Alunos, que suporta arquivos CSV." },
+    { question: "Como exportar planos de aula?", answer: "Você pode exportar planos de aula para PDF ou DOCX na página Planos de Aula." },
+    { question: "O que são recomendações da IA?", answer: "Recomendações da IA são sugestões personalizadas baseadas no desempenho da sua turma e padrões de aprendizagem." },
   ];
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-4xl font-bold text-foreground">Support Center</h1>
+        <h1 className="text-4xl font-bold text-foreground">Central de Suporte</h1>
         <p className="text-muted-foreground mt-1">
-          Need help with EducAssist?
+          Precisa de ajuda com o EducAssist?
         </p>
       </div>
 
@@ -50,7 +50,7 @@ export default function Support() {
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
         <input
           type="text"
-          placeholder="Search for help articles..."
+          placeholder="Pesquisar artigos de ajuda..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="w-full pl-12 pr-4 py-3 rounded-2xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
@@ -66,7 +66,7 @@ export default function Support() {
       >
         <div className="flex items-center gap-3 mb-4">
           <Book className="h-5 w-5 text-primary" />
-          <h2 className="text-xl font-bold text-foreground">Popular Articles</h2>
+          <h2 className="text-xl font-bold text-foreground">Artigos Populares</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {popularArticles.map((article, index) => (
@@ -111,10 +111,10 @@ export default function Support() {
       >
         <div className="flex items-center gap-3 mb-4">
           <Book className="h-5 w-5 text-primary" />
-          <h2 className="text-xl font-bold text-foreground">Documentation</h2>
+          <h2 className="text-xl font-bold text-foreground">Documentação</h2>
         </div>
         <div className="space-y-2">
-          {["Getting Started Guide", "User Manual", "API Documentation", "Best Practices"].map((doc, index) => (
+          {["Guia de Primeiros Passos", "Manual do Usuário", "Documentação da API", "Melhores Práticas"].map((doc, index) => (
             <button
               key={index}
               className="w-full p-3 rounded-xl border border-border hover:bg-muted/50 transition-colors text-left flex items-center justify-between"
@@ -135,7 +135,7 @@ export default function Support() {
       >
         <div className="flex items-center gap-3 mb-6">
           <MessageSquare className="h-5 w-5 text-primary" />
-          <h2 className="text-xl font-bold text-foreground">Contact Support</h2>
+          <h2 className="text-xl font-bold text-foreground">Contatar Suporte</h2>
         </div>
 
         <AnimatePresence>
@@ -147,43 +147,43 @@ export default function Support() {
               className="p-6 rounded-xl bg-green-500/10 border border-green-500/20 text-center"
             >
               <CheckCircle className="h-12 w-12 text-green-500 mx-auto mb-3" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">Message Sent!</h3>
-              <p className="text-sm text-muted-foreground">Our support team will get back to you within 24 hours.</p>
+              <h3 className="text-lg font-semibold text-foreground mb-2">Mensagem Enviada!</h3>
+              <p className="text-sm text-muted-foreground">Nossa equipe de suporte entrará em contato em até 24 horas.</p>
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">Subject</label>
+                <label className="text-sm font-medium text-foreground mb-2 block">Assunto</label>
                 <input
                   type="text"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
-                  placeholder="Brief description of your issue"
+                  placeholder="Breve descrição do seu problema"
                   className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                   required
                 />
               </div>
 
               <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">Priority</label>
+                <label className="text-sm font-medium text-foreground mb-2 block">Prioridade</label>
                 <select
                   value={priority}
                   onChange={(e) => setPriority(e.target.value)}
                   className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 >
-                  <option value="low">Low</option>
-                  <option value="medium">Medium</option>
-                  <option value="high">High</option>
-                  <option value="urgent">Urgent</option>
+                  <option value="low">Baixa</option>
+                  <option value="medium">Média</option>
+                  <option value="high">Alta</option>
+                  <option value="urgent">Urgente</option>
                 </select>
               </div>
 
               <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">Message</label>
+                <label className="text-sm font-medium text-foreground mb-2 block">Mensagem</label>
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Describe your issue in detail..."
+                  placeholder="Descreva seu problema em detalhes..."
                   rows={5}
                   className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                   required
@@ -191,17 +191,17 @@ export default function Support() {
               </div>
 
               <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">Attachment (Optional)</label>
+                <label className="text-sm font-medium text-foreground mb-2 block">Anexo (Opcional)</label>
                 <div className="border-2 border-dashed border-border rounded-xl p-6 text-center hover:bg-muted/50 transition-colors cursor-pointer">
                   <Paperclip className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
-                  <p className="text-sm text-muted-foreground">Click to upload or drag and drop</p>
-                  <p className="text-xs text-muted-foreground mt-1">PDF, PNG, JPG up to 10MB</p>
+                  <p className="text-sm text-muted-foreground">Clique para enviar ou arrastar e soltar</p>
+                  <p className="text-xs text-muted-foreground mt-1">PDF, PNG, JPG até 10MB</p>
                 </div>
               </div>
 
               <Button type="submit" className="w-full">
                 <Send className="h-4 w-4 mr-2" />
-                Submit Request
+                Enviar Solicitação
               </Button>
             </form>
           )}

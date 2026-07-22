@@ -23,40 +23,40 @@ export function NotificationDropdown({ isOpen, onClose }: NotificationDropdownPr
     {
       id: "1",
       icon: <CheckCircle className="h-4 w-4 text-green-500" />,
-      title: "Lesson Plan successfully generated",
-      description: "Your lesson plan for Mathematics is ready.",
+      title: "Plano de Aula gerado com sucesso",
+      description: "Seu plano de aula para Matemática está pronto.",
       timestamp: "2m ago",
       unread: true,
     },
     {
       id: "2",
       icon: <FileText className="h-4 w-4 text-blue-500" />,
-      title: "Document analyzed",
-      description: "Your document has been processed successfully.",
+      title: "Documento analisado",
+      description: "Seu documento foi processado com sucesso.",
       timestamp: "15m ago",
       unread: true,
     },
     {
       id: "3",
       icon: <Sparkles className="h-4 w-4 text-purple-500" />,
-      title: "Activity exported",
-      description: "Your activity has been exported to PDF.",
+      title: "Atividade exportada",
+      description: "Sua atividade foi exportada para PDF.",
       timestamp: "1h ago",
       unread: false,
     },
     {
       id: "4",
       icon: <ClipboardList className="h-4 w-4 text-orange-500" />,
-      title: "Assessment completed",
-      description: "Class 9A has completed the Fractions assessment.",
+      title: "Avaliação concluída",
+      description: "A turma 9A concluiu a avaliação de Frações.",
       timestamp: "2h ago",
       unread: false,
     },
     {
       id: "5",
       icon: <AlertTriangle className="h-4 w-4 text-red-500" />,
-      title: "AI generated a new recommendation",
-      description: "Students from Class 9A are struggling with Fractions.",
+      title: "IA gerou uma nova recomendação",
+      description: "Alunos da turma 9A estão com dificuldades em Frações.",
       timestamp: "3h ago",
       unread: false,
     },
@@ -85,7 +85,7 @@ export function NotificationDropdown({ isOpen, onClose }: NotificationDropdownPr
       >
         <div className="p-4 border-b border-border/50 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <h3 className="font-semibold text-foreground">Notifications</h3>
+            <h3 className="font-semibold text-foreground">Notificações</h3>
             {unreadCount > 0 && (
               <span className="px-2 py-0.5 rounded-full bg-primary text-primary-foreground text-xs font-medium">
                 {unreadCount}
@@ -95,7 +95,7 @@ export function NotificationDropdown({ isOpen, onClose }: NotificationDropdownPr
           {unreadCount > 0 && (
             <Button variant="ghost" size="sm" onClick={markAllAsRead} className="text-xs">
               <Check className="h-3 w-3 mr-1" />
-              Mark all read
+              Marcar todas como lidas
             </Button>
           )}
         </div>
@@ -103,7 +103,7 @@ export function NotificationDropdown({ isOpen, onClose }: NotificationDropdownPr
         <div className="max-h-96 overflow-y-auto">
           {notifications.length === 0 ? (
             <div className="p-8 text-center text-muted-foreground">
-              No notifications
+              Nenhuma notificação
             </div>
           ) : (
             notifications.map((notification) => (
@@ -152,7 +152,7 @@ export function NotificationDropdown({ isOpen, onClose }: NotificationDropdownPr
 
         <div className="p-3 border-t border-border/50 bg-muted/30">
           <Button variant="ghost" className="w-full text-sm" onClick={onClose}>
-            View All Notifications
+            Ver Todas as Notificações
           </Button>
         </div>
       </motion.div>

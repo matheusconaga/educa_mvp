@@ -17,14 +17,14 @@ export function UserMenuDropdown({ isOpen, onClose }: UserMenuDropdownProps) {
   };
 
   const accountItems = [
-    { icon: User, label: "My Profile", action: () => {} },
-    { icon: Settings, label: "Account Settings", action: () => {} },
+    { icon: User, label: "Meu Perfil", action: () => {} },
+    { icon: Settings, label: "Configurações da Conta", action: () => {} },
   ];
 
   const preferenceItems = [
-    { icon: Globe, label: "Language", action: () => {} },
-    { icon: Palette, label: "Appearance", action: () => {} },
-    { icon: Shield, label: "Privacy", action: () => {} },
+    { icon: Globe, label: "Idioma", action: () => {} },
+    { icon: Palette, label: "Aparência", action: () => {} },
+    { icon: Shield, label: "Privacidade", action: () => {} },
   ];
 
   if (!isOpen) return null;
@@ -55,7 +55,7 @@ export function UserMenuDropdown({ isOpen, onClose }: UserMenuDropdownProps) {
         <div className="p-2">
           {/* Account Section */}
           <div className="mb-1">
-            <p className="px-3 py-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wider">Account</p>
+            <p className="px-3 py-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wider">Conta</p>
             {accountItems.map((item) => {
               const Icon = item.icon;
               return (
@@ -77,7 +77,7 @@ export function UserMenuDropdown({ isOpen, onClose }: UserMenuDropdownProps) {
 
           {/* Preferences Section */}
           <div className="mb-1">
-            <p className="px-3 py-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wider">Preferences</p>
+            <p className="px-3 py-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wider">Preferências</p>
             {preferenceItems.map((item) => {
               const Icon = item.icon;
               return (
@@ -104,7 +104,7 @@ export function UserMenuDropdown({ isOpen, onClose }: UserMenuDropdownProps) {
               className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-red-500/10 transition-all duration-200 text-left group"
             >
               <LogOut className="h-4 w-4 text-red-600 group-hover:text-red-700 transition-colors" />
-              <span className="text-sm font-medium text-red-600 group-hover:text-red-700 transition-colors flex-1">Logout</span>
+              <span className="text-sm font-medium text-red-600 group-hover:text-red-700 transition-colors flex-1">Sair</span>
             </button>
           </div>
         </div>

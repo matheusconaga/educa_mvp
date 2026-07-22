@@ -24,53 +24,53 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
     inclusiveEducationNeeds: [],
   });
 
-  const grades = ["6th Grade", "7th Grade", "8th Grade", "9th Grade", "High School"];
-  const subjects = ["Mathematics", "Science", "History", "Portuguese", "Biology", "Chemistry", "Physics", "Geography"];
+  const grades = ["6ª Série", "7ª Série", "8ª Série", "9ª Série", "Ensino Médio"];
+  const subjects = ["Matemática", "Ciências", "História", "Português", "Biologia", "Química", "Física", "Geografia"];
   const difficulties: Array<{ value: AssessmentFormData["difficulty"]; label: string }> = [
-    { value: "easy", label: "Easy" },
-    { value: "medium", label: "Medium" },
-    { value: "hard", label: "Hard" },
-    { value: "very-hard", label: "Very Hard" },
+    { value: "easy", label: "Fácil" },
+    { value: "medium", label: "Médio" },
+    { value: "hard", label: "Difícil" },
+    { value: "very-hard", label: "Muito Difícil" },
   ];
   const estimatedTimes = ["20", "30", "40", "45", "60", "90"];
   const questionCounts = ["5", "10", "15", "20", "25", "30"];
   const questionTypes: Array<{ value: QuestionType; label: string }> = [
-    { value: "multiple-choice", label: "Multiple Choice" },
-    { value: "open-ended", label: "Open-ended" },
-    { value: "true-false", label: "True or False" },
-    { value: "matching", label: "Matching" },
-    { value: "fill-blanks", label: "Fill in the Blanks" },
-    { value: "essay", label: "Essay" },
-    { value: "mixed", label: "Mixed Assessment" },
+    { value: "multiple-choice", label: "Múltipla Escolha" },
+    { value: "open-ended", label: "Resposta Aberta" },
+    { value: "true-false", label: "Verdadeiro ou Falso" },
+    { value: "matching", label: "Associação" },
+    { value: "fill-blanks", label: "Preencher Lacunas" },
+    { value: "essay", label: "Redação" },
+    { value: "mixed", label: "Avaliação Mista" },
   ];
   const activityTypes: Array<{ value: ActivityType; label: string }> = [
-    { value: "classroom-exercise", label: "Classroom Exercise" },
-    { value: "homework", label: "Homework" },
-    { value: "group-activity", label: "Group Activity" },
-    { value: "individual-activity", label: "Individual Activity" },
-    { value: "practical-activity", label: "Practical Activity" },
+    { value: "classroom-exercise", label: "Exercício em Sala" },
+    { value: "homework", label: "Tarefa de Casa" },
+    { value: "group-activity", label: "Atividade em Grupo" },
+    { value: "individual-activity", label: "Atividade Individual" },
+    { value: "practical-activity", label: "Atividade Prática" },
   ];
   const assignmentTypes: Array<{ value: AssignmentType; label: string }> = [
-    { value: "essay", label: "Essay" },
-    { value: "research-project", label: "Research Project" },
-    { value: "presentation", label: "Presentation" },
-    { value: "seminar", label: "Seminar" },
-    { value: "case-study", label: "Case Study" },
-    { value: "poster", label: "Poster" },
-    { value: "portfolio", label: "Portfolio" },
-    { value: "group-project", label: "Group Project" },
-    { value: "book-review", label: "Book Review" },
-    { value: "experiment", label: "Experiment" },
+    { value: "essay", label: "Redação" },
+    { value: "research-project", label: "Projeto de Pesquisa" },
+    { value: "presentation", label: "Apresentação" },
+    { value: "seminar", label: "Seminário" },
+    { value: "case-study", label: "Estudo de Caso" },
+    { value: "poster", label: "Pôster" },
+    { value: "portfolio", label: "Portfólio" },
+    { value: "group-project", label: "Projeto em Grupo" },
+    { value: "book-review", label: "Resenha de Livro" },
+    { value: "experiment", label: "Experimento" },
   ];
   const inclusiveNeeds = [
-    "Autism Spectrum Disorder",
-    "ADHD",
-    "Dyslexia",
-    "Visual Impairment",
-    "Hearing Impairment",
-    "Intellectual Disability",
-    "Physical Disability",
-    "Other",
+    "Transtorno do Espectro Autista",
+    "TDAH",
+    "Dislexia",
+    "Deficiência Visual",
+    "Deficiência Auditiva",
+    "Deficiência Intelectual",
+    "Deficiência Física",
+    "Outro",
   ];
 
   const toggleQuestionType = (type: QuestionType) => {
@@ -107,16 +107,16 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
     <div className="space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold text-foreground">Generate Assessment</h1>
+        <h1 className="text-2xl font-bold text-foreground">Gerar Avaliação</h1>
         <p className="text-sm text-muted-foreground mt-1">
-          Create activities, tests and assignments in minutes using AI.
+          Crie atividades, testes e trabalhos em minutos usando IA.
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Section 1: Assessment Type */}
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold text-foreground">Assessment Type</h2>
+          <h2 className="text-lg font-semibold text-foreground">Tipo de Avaliação</h2>
           
           <div className="flex gap-2">
             {(["activity", "test", "assignment"] as AssessmentType[]).map((type) => (
@@ -131,7 +131,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                     : "bg-muted text-foreground hover:bg-primary/20"
                 )}
               >
-                {type === "test" ? "Test / Quiz" : type.charAt(0).toUpperCase() + type.slice(1)}
+                {type === "test" ? "Prova / Quiz" : type.charAt(0).toUpperCase() + type.slice(1)}
               </button>
             ))}
           </div>
@@ -139,12 +139,12 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
         {/* Section 2: Basic Information */}
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold text-foreground">Basic Information</h2>
+          <h2 className="text-lg font-semibold text-foreground">Informações Básicas</h2>
           
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
-                Class / Grade
+                Turma / Série
               </label>
               <select
                 value={formData.grade}
@@ -152,7 +152,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                 className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 required
               >
-                <option value="">Select grade</option>
+                <option value="">Selecione a série</option>
                 {grades.map((grade) => (
                   <option key={grade} value={grade}>
                     {grade}
@@ -163,7 +163,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
-                Subject
+                Disciplina
               </label>
               <select
                 value={formData.subject}
@@ -171,7 +171,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                 className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 required
               >
-                <option value="">Select subject</option>
+                <option value="">Selecione a disciplina</option>
                 {subjects.map((subject) => (
                   <option key={subject} value={subject}>
                     {subject}
@@ -182,13 +182,13 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
-                Topic
+                Tópico
               </label>
               <input
                 type="text"
                 value={formData.topic}
                 onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
-                placeholder="e.g., Photosynthesis"
+                placeholder="ex: Fotossíntese"
                 className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 required
               />
@@ -196,12 +196,12 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
-                Learning Objective
+                Objetivo de Aprendizagem
               </label>
               <textarea
                 value={formData.learningObjective}
                 onChange={(e) => setFormData({ ...formData, learningObjective: e.target.value })}
-                placeholder="e.g., Students should understand the photosynthesis process and identify its stages."
+                placeholder="ex: Os alunos devem entender o processo de fotossíntese e identificar suas etapas."
                 rows={3}
                 className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                 required
@@ -212,12 +212,12 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
         {/* Section 3: Assessment Configuration */}
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold text-foreground">Assessment Configuration</h2>
+          <h2 className="text-lg font-semibold text-foreground">Configuração da Avaliação</h2>
           
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
-                Difficulty
+                Dificuldade
               </label>
               <div className="flex gap-2">
                 {difficulties.map((diff) => (
@@ -240,7 +240,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
-                Estimated Time
+                Tempo Estimado
               </label>
               <select
                 value={formData.estimatedTime}
@@ -257,7 +257,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
-                Number of Questions
+                Número de Questões
               </label>
               <select
                 value={formData.numberOfQuestions}
@@ -276,7 +276,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
         {/* Section 4: Question Types */}
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold text-foreground">Question Types</h2>
+          <h2 className="text-lg font-semibold text-foreground">Tipos de Questão</h2>
           
           <div className="flex flex-wrap gap-2">
             {questionTypes.map((type) => (
@@ -300,7 +300,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
         {/* Section 5: Conditional Options */}
         {formData.assessmentType === "activity" && (
           <div className="space-y-4">
-            <h2 className="text-lg font-semibold text-foreground">Activity Type</h2>
+            <h2 className="text-lg font-semibold text-foreground">Tipo de Atividade</h2>
             
             <div className="flex flex-wrap gap-2">
               {activityTypes.map((type) => (
@@ -324,7 +324,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
         {formData.assessmentType === "test" && (
           <div className="space-y-4">
-            <h2 className="text-lg font-semibold text-foreground">Test Configuration</h2>
+            <h2 className="text-lg font-semibold text-foreground">Configuração da Prova</h2>
             
             <div className="space-y-3">
               <div className="flex items-center gap-3">
@@ -336,7 +336,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                   className="w-4 h-4 rounded border-border"
                 />
                 <label htmlFor="randomize" className="text-sm text-foreground">
-                  Randomize Questions
+                  Embaralhar Questões
                 </label>
               </div>
 
@@ -349,7 +349,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                   className="w-4 h-4 rounded border-border"
                 />
                 <label htmlFor="answerKey" className="text-sm text-foreground">
-                  Generate Answer Key
+                  Gerar Gabarito
                 </label>
               </div>
 
@@ -362,7 +362,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                   className="w-4 h-4 rounded border-border"
                 />
                 <label htmlFor="teacherVersion" className="text-sm text-foreground">
-                  Generate Teacher Version
+                  Gerar Versão do Professor
                 </label>
               </div>
 
@@ -375,7 +375,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                   className="w-4 h-4 rounded border-border"
                 />
                 <label htmlFor="studentVersion" className="text-sm text-foreground">
-                  Generate Student Version
+                  Gerar Versão do Aluno
                 </label>
               </div>
             </div>
@@ -383,7 +383,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
             {/* Subject-specific options */}
             {(formData.subject === "Portuguese" || formData.subject === "History") && (
               <div className="space-y-3 pt-4 border-t border-border">
-                <h3 className="text-sm font-medium text-foreground">Language & History Options</h3>
+                <h3 className="text-sm font-medium text-foreground">Opções de Língua e História</h3>
                 {formData.subject === "Portuguese" && (
                   <>
                     <div className="flex items-center gap-3">
@@ -395,7 +395,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                         className="w-4 h-4 rounded border-border"
                       />
                       <label htmlFor="reading" className="text-sm text-foreground">
-                        Include Reading Comprehension
+                        Incluir Compreensão de Leitura
                       </label>
                     </div>
                     <div className="flex items-center gap-3">
@@ -407,7 +407,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                         className="w-4 h-4 rounded border-border"
                       />
                       <label htmlFor="grammar" className="text-sm text-foreground">
-                        Include Grammar Questions
+                        Incluir Questões de Gramática
                       </label>
                     </div>
                     <div className="flex items-center gap-3">
@@ -419,7 +419,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                         className="w-4 h-4 rounded border-border"
                       />
                       <label htmlFor="writing" className="text-sm text-foreground">
-                        Include Writing Prompt
+                        Incluir Proposta de Redação
                       </label>
                     </div>
                   </>
@@ -435,7 +435,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                         className="w-4 h-4 rounded border-border"
                       />
                       <label htmlFor="source" className="text-sm text-foreground">
-                        Include Source Analysis
+                        Incluir Análise de Fontes
                       </label>
                     </div>
                     <div className="flex items-center gap-3">
@@ -447,7 +447,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                         className="w-4 h-4 rounded border-border"
                       />
                       <label htmlFor="timeline" className="text-sm text-foreground">
-                        Include Timeline Questions
+                        Incluir Questões de Linha do Tempo
                       </label>
                     </div>
                   </>
@@ -457,7 +457,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
             {(formData.subject === "Science" || formData.subject === "Biology" || formData.subject === "Chemistry" || formData.subject === "Physics") && (
               <div className="space-y-3 pt-4 border-t border-border">
-                <h3 className="text-sm font-medium text-foreground">Science Options</h3>
+                <h3 className="text-sm font-medium text-foreground">Opções de Ciências</h3>
                 <div className="flex items-center gap-3">
                   <input
                     type="checkbox"
@@ -467,7 +467,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                     className="w-4 h-4 rounded border-border"
                   />
                   <label htmlFor="diagrams" className="text-sm text-foreground">
-                    Include Diagrams
+                    Incluir Diagramas
                   </label>
                 </div>
                 <div className="flex items-center gap-3">
@@ -479,7 +479,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                     className="w-4 h-4 rounded border-border"
                   />
                   <label htmlFor="interpretation" className="text-sm text-foreground">
-                    Include Interpretation Questions
+                    Incluir Questões de Interpretação
                   </label>
                 </div>
               </div>
@@ -487,7 +487,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
             {formData.subject === "Mathematics" && (
               <div className="space-y-3 pt-4 border-t border-border">
-                <h3 className="text-sm font-medium text-foreground">Mathematics Options</h3>
+                <h3 className="text-sm font-medium text-foreground">Opções de Matemática</h3>
                 <div className="flex items-center gap-3">
                   <input
                     type="checkbox"
@@ -497,7 +497,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                     className="w-4 h-4 rounded border-border"
                   />
                   <label htmlFor="problemSolving" className="text-sm text-foreground">
-                    Include Problem Solving
+                    Incluir Resolução de Problemas
                   </label>
                 </div>
                 <div className="flex items-center gap-3">
@@ -509,7 +509,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                     className="w-4 h-4 rounded border-border"
                   />
                   <label htmlFor="stepByStep" className="text-sm text-foreground">
-                    Include Step-by-Step Exercises
+                    Incluir Exercícios Passo a Passo
                   </label>
                 </div>
               </div>
@@ -519,11 +519,11 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
         {formData.assessmentType === "assignment" && (
           <div className="space-y-4">
-            <h2 className="text-lg font-semibold text-foreground">Assignment Configuration</h2>
+            <h2 className="text-lg font-semibold text-foreground">Configuração do Trabalho</h2>
             
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
-                Assignment Type
+                Tipo de Trabalho
               </label>
               <div className="flex flex-wrap gap-2">
                 {assignmentTypes.map((type) => (
@@ -554,7 +554,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                   className="w-4 h-4 rounded border-border"
                 />
                 <label htmlFor="presentation" className="text-sm text-foreground">
-                  Presentation Required
+                  Apresentação Obrigatória
                 </label>
               </div>
 
@@ -567,19 +567,19 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                   className="w-4 h-4 rounded border-border"
                 />
                 <label htmlFor="rubric" className="text-sm text-foreground">
-                  Rubric Included
+                  Rubrica Incluída
                 </label>
               </div>
             </div>
 
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
-                Evaluation Criteria
+                Critérios de Avaliação
               </label>
               <textarea
                 value={formData.evaluationCriteria || ""}
                 onChange={(e) => setFormData({ ...formData, evaluationCriteria: e.target.value })}
-                placeholder="e.g., Content accuracy, creativity, presentation skills"
+                placeholder="ex: Precisão do conteúdo, criatividade, habilidades de apresentação"
                 rows={2}
                 className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
               />
@@ -587,7 +587,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
-                Submission Deadline
+                Prazo de Entrega
               </label>
               <input
                 type="date"
@@ -601,12 +601,12 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
         {/* Section 6: Additional Instructions */}
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold text-foreground">Additional Instructions</h2>
+          <h2 className="text-lg font-semibold text-foreground">Instruções Adicionais</h2>
           
           <textarea
             value={formData.additionalInstructions}
             onChange={(e) => setFormData({ ...formData, additionalInstructions: e.target.value })}
-            placeholder="e.g., Focus on critical thinking. Avoid repetitive questions. Include real-life examples."
+            placeholder="ex: Focar no pensamento crítico. Evitar perguntas repetitivas. Incluir exemplos da vida real."
             rows={4}
             className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
           />
@@ -614,11 +614,11 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
 
         {/* Section 7: Accessibility */}
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold text-foreground">Accessibility</h2>
+          <h2 className="text-lg font-semibold text-foreground">Acessibilidade</h2>
           
           <div className="flex items-center gap-3">
             <label className="text-sm text-foreground">
-              Adapt for Inclusive Education
+              Adaptar para Educação Inclusiva
             </label>
             <button
               type="button"
@@ -657,7 +657,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
                 ))}
               </div>
               <p className="text-xs text-muted-foreground">
-                The AI will adapt wording and activity complexity for inclusive learning.
+                A IA adaptará a redação e a complexidade da atividade para aprendizagem inclusiva.
               </p>
             </>
           )}
@@ -670,7 +670,7 @@ export function AssessmentForm({ onSubmit, isGenerating }: AssessmentFormProps) 
           className="w-full py-3 text-lg"
           disabled={!isFormValid || isGenerating}
         >
-          {isGenerating ? "Generating..." : "Generate Assessment"}
+          {isGenerating ? "Gerando..." : "Gerar Avaliação"}
         </Button>
       </form>
     </div>

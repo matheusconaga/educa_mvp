@@ -22,14 +22,14 @@ export function AssessmentPreview({
   const [editableContent, setEditableContent] = useState<GeneratedAssessment | null>(null);
 
   const refineOptions = [
-    "Make easier",
-    "Increase difficulty",
-    "Generate more questions",
-    "Reduce number of questions",
-    "Improve wording",
-    "Generate alternative version",
-    "Generate reinforcement activity",
-    "Generate challenge version",
+    "Tornar mais fácil",
+    "Aumentar dificuldade",
+    "Gerar mais questões",
+    "Reduzir número de questões",
+    "Melhorar redação",
+    "Gerar versão alternativa",
+    "Gerar atividade de reforço",
+    "Gerar versão desafio",
   ];
 
   const handleEdit = () => {
@@ -94,9 +94,9 @@ export function AssessmentPreview({
       <div className="rounded-3xl border border-border bg-card p-12 shadow-md h-full flex justify-center">
         <div className="text-center">
           <Sparkles className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-foreground mb-2">No Assessment Yet</h3>
+          <h3 className="text-xl font-semibold text-foreground mb-2">Nenhuma Avaliação Ainda</h3>
           <p className="text-sm text-muted-foreground">
-            Fill in the form on the left and click "Generate Assessment" to create your AI-powered assessment.
+            Preencha o formulário à esquerda e clique em "Gerar Avaliação" para criar sua avaliação alimentada por IA.
           </p>
         </div>
       </div>
@@ -109,15 +109,15 @@ export function AssessmentPreview({
     <div className="space-y-4">
       {/* Header Actions */}
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-bold text-foreground">Assessment Preview</h2>
+        <h2 className="text-xl font-bold text-foreground">Visualização da Avaliação</h2>
         <div className="flex items-center gap-2">
           <Button variant="outline" size="sm" onClick={onShowHistory}>
             <History className="h-4 w-4 mr-2" />
-            History
+            Histórico
           </Button>
           <Button variant="outline" size="sm" onClick={handleEdit}>
             {isEditing ? <Check className="h-4 w-4 mr-2" /> : <Edit2 className="h-4 w-4 mr-2" />}
-            {isEditing ? "Save" : "Edit"}
+            {isEditing ? "Salvar" : "Editar"}
           </Button>
           <Button variant="outline" size="sm" onClick={onExportPDF}>
             <Download className="h-4 w-4 mr-2" />
@@ -134,7 +134,7 @@ export function AssessmentPreview({
       <div className="rounded-2xl border border-border bg-primary/5 p-4">
         <div className="flex items-center gap-2 mb-3">
           <Sparkles className="h-4 w-4 text-primary" />
-          <span className="text-sm font-medium text-foreground">Refine with AI</span>
+          <span className="text-sm font-medium text-foreground">Refinar com IA</span>
         </div>
         <div className="flex flex-wrap gap-2">
           {refineOptions.map((option) => (
@@ -166,19 +166,19 @@ export function AssessmentPreview({
           
           <div className="grid grid-cols-4 gap-4 mt-4 text-sm">
             <div>
-              <span className="text-muted-foreground">Subject:</span>
+              <span className="text-muted-foreground">Disciplina:</span>
               <span className="ml-2 font-medium text-foreground">{content?.subject}</span>
             </div>
             <div>
-              <span className="text-muted-foreground">Grade:</span>
+              <span className="text-muted-foreground">Série:</span>
               <span className="ml-2 font-medium text-foreground">{content?.grade}</span>
             </div>
             <div>
-              <span className="text-muted-foreground">Time:</span>
+              <span className="text-muted-foreground">Tempo:</span>
               <span className="ml-2 font-medium text-foreground">{content?.estimatedTime} min</span>
             </div>
             <div>
-              <span className="text-muted-foreground">Difficulty:</span>
+              <span className="text-muted-foreground">Dificuldade:</span>
               <span className="ml-2 font-medium text-foreground capitalize">{content?.difficulty}</span>
             </div>
           </div>
@@ -186,7 +186,7 @@ export function AssessmentPreview({
 
         {/* Instructions */}
         <div>
-          <h3 className="text-lg font-semibold text-foreground mb-2">Instructions</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-2">Instruções</h3>
           {isEditing ? (
             <textarea
               value={content?.instructions || ""}
@@ -202,10 +202,10 @@ export function AssessmentPreview({
         {/* Questions */}
         <div className="space-y-6">
           <div className="flex items-center justify-between">
-            <h3 className="text-lg font-semibold text-foreground">Questions</h3>
+            <h3 className="text-lg font-semibold text-foreground">Questões</h3>
             {isEditing && (
               <Button variant="outline" size="sm" onClick={handleAddQuestion}>
-                + Add Question
+                + Adicionar Questão
               </Button>
             )}
           </div>
@@ -255,7 +255,7 @@ export function AssessmentPreview({
 
                   {question.correctAnswer && (
                     <div className="mt-3 text-sm">
-                      <span className="text-muted-foreground">Correct Answer: </span>
+                      <span className="text-muted-foreground">Resposta Correta: </span>
                       <span className="text-foreground font-medium">{question.correctAnswer}</span>
                     </div>
                   )}
@@ -287,7 +287,7 @@ export function AssessmentPreview({
         {/* Answer Key */}
         {content?.answerKey && (
           <div>
-            <h3 className="text-lg font-semibold text-foreground mb-2">Answer Key</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-2">Gabarito</h3>
             <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
               <p className="text-sm text-foreground whitespace-pre-wrap">{content.answerKey}</p>
             </div>
@@ -297,7 +297,7 @@ export function AssessmentPreview({
         {/* Evaluation Rubric */}
         {content?.evaluationRubric && (
           <div>
-            <h3 className="text-lg font-semibold text-foreground mb-2">Evaluation Rubric</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-2">Rubrica de Avaliação</h3>
             <div className="p-4 rounded-xl bg-muted/30">
               <p className="text-sm text-foreground whitespace-pre-wrap">{content.evaluationRubric}</p>
             </div>
@@ -306,7 +306,7 @@ export function AssessmentPreview({
 
         {/* Teacher Notes */}
         <div>
-          <h3 className="text-lg font-semibold text-foreground mb-2">Teacher Notes</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-2">Notas do Professor</h3>
           {isEditing ? (
             <textarea
               value={content?.teacherNotes || ""}
@@ -321,7 +321,7 @@ export function AssessmentPreview({
 
         {/* AI Recommendations */}
         <div>
-          <h3 className="text-lg font-semibold text-foreground mb-2">AI Recommendations</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-2">Recomendações da IA</h3>
           <div className="space-y-2">
             {content?.aiRecommendations.map((recommendation, index) => (
               <div

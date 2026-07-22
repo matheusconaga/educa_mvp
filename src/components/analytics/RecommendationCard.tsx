@@ -35,15 +35,15 @@ export function RecommendationCard({ recommendation, onAction }: RecommendationC
   const getActionButtonLabel = (action: EducationalRecommendation["action"]) => {
     switch (action) {
       case "generate-lesson-plan":
-        return "Generate Lesson Plan";
+        return "Gerar Plano de Aula";
       case "generate-activity":
-        return "Generate Activity";
+        return "Gerar Atividade";
       case "generate-assessment":
-        return "Generate Assessment";
+        return "Gerar Avaliação";
       case "review-documents":
-        return "Review Documents";
+        return "Revisar Documentos";
       case "view-details":
-        return "View Details";
+        return "Ver Detalhes";
     }
   };
 

@@ -16,25 +16,25 @@ interface LessonPlanProgressProps {
 }
 
 const stepLabels: Record<GenerationStep, string> = {
-  analyzing: "Analyzing class information...",
-  strategies: "Selecting teaching strategies...",
-  structure: "Generating lesson structure...",
-  activities: "Creating activities...",
-  assessment: "Building assessment...",
-  adaptations: "Applying educational adaptations...",
-  finalizing: "Finalizing lesson plan...",
-  completed: "Completed",
+  analyzing: "Analisando informações da turma...",
+  strategies: "Selecionando estratégias de ensino...",
+  structure: "Gerando estrutura da aula...",
+  activities: "Criando atividades...",
+  assessment: "Construindo avaliação...",
+  adaptations: "Aplicando adaptações educacionais...",
+  finalizing: "Finalizando plano de aula...",
+  completed: "Concluído",
 };
 
 const stepDescriptions: Record<GenerationStep, string> = {
-  analyzing: "Analyzing your lesson requirements and objectives",
-  strategies: "Selecting the best teaching methodologies for your class",
-  structure: "Building the overall lesson structure and flow",
-  activities: "Creating engaging and effective learning activities",
-  assessment: "Designing assessment strategies to measure learning",
-  adaptations: "Applying educational adaptations for inclusive learning",
-  finalizing: "Finalizing your complete lesson plan",
-  completed: "Your lesson plan has been successfully generated",
+  analyzing: "Analisando seus requisitos e objetivos da aula",
+  strategies: "Selecionando as melhores metodologias de ensino para sua turma",
+  structure: "Construindo a estrutura geral e fluxo da aula",
+  activities: "Criando atividades de aprendizagem envolventes e eficazes",
+  assessment: "Projetando estratégias de avaliação para medir a aprendizagem",
+  adaptations: "Aplicando adaptações educacionais para aprendizagem inclusiva",
+  finalizing: "Finalizando seu plano de aula completo",
+  completed: "Seu plano de aula foi gerado com sucesso",
 };
 
 export function LessonPlanProgress({ currentStep, progress }: LessonPlanProgressProps) {

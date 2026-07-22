@@ -13,9 +13,9 @@ export function ClassHeader({ onCreateClass, onFilter, searchQuery, onSearchChan
     <div className="space-y-6">
       {/* Title */}
       <div>
-        <h1 className="text-4xl font-bold text-foreground">My Classes</h1>
+        <h1 className="text-4xl font-bold text-foreground">Minhas Turmas</h1>
         <p className="text-muted-foreground mt-1">
-          Manage your classes, students and educational progress.
+          Gerencie suas turmas, alunos e progresso educacional.
         </p>
       </div>
 
@@ -26,7 +26,7 @@ export function ClassHeader({ onCreateClass, onFilter, searchQuery, onSearchChan
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <input
             type="text"
-            placeholder="Search classes..."
+            placeholder="Pesquisar turmas..."
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
             className="w-full pl-10 pr-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
@@ -37,11 +37,11 @@ export function ClassHeader({ onCreateClass, onFilter, searchQuery, onSearchChan
         <div className="flex gap-2">
           <Button variant="outline" onClick={onFilter}>
             <Filter className="h-4 w-4 mr-2" />
-            Filter
+            Filtrar
           </Button>
           <Button onClick={onCreateClass}>
             <Plus className="h-4 w-4 mr-2" />
-            New Class
+            Nova Turma
           </Button>
         </div>
       </div>

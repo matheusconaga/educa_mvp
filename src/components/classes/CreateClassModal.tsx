@@ -19,8 +19,8 @@ export function CreateClassModal({ isOpen, onClose, onSubmit }: CreateClassModal
     description: "",
   });
 
-  const grades = ["6th Grade", "7th Grade", "8th Grade", "9th Grade", "10th Grade", "11th Grade", "12th Grade"];
-  const subjects = ["Mathematics", "Science", "History", "Portuguese", "Geography", "Biology", "Chemistry", "Physics", "English"];
+  const grades = ["6ª Série", "7ª Série", "8ª Série", "9ª Série", "1º Ano", "2º Ano", "3º Ano"];
+  const subjects = ["Matemática", "Ciências", "História", "Português", "Geografia", "Biologia", "Química", "Física", "Inglês"];
   const schoolYears = ["2024", "2025"];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -53,7 +53,7 @@ export function CreateClassModal({ isOpen, onClose, onSubmit }: CreateClassModal
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-border">
-              <h2 className="text-xl font-bold text-foreground">Create New Class</h2>
+              <h2 className="text-xl font-bold text-foreground">Criar Nova Turma</h2>
               <Button variant="ghost" size="sm" onClick={onClose}>
                 <X className="h-5 w-5" />
               </Button>
@@ -63,13 +63,13 @@ export function CreateClassModal({ isOpen, onClose, onSubmit }: CreateClassModal
             <form onSubmit={handleSubmit} className="p-6 space-y-4">
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
-                  Class Name
+                  Nome da Turma
                 </label>
                 <input
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="e.g., 9th Grade A"
+                  placeholder="ex: 9ª Série A"
                   className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                   required
                 />
@@ -77,7 +77,7 @@ export function CreateClassModal({ isOpen, onClose, onSubmit }: CreateClassModal
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
-                  Grade
+                  Série
                 </label>
                 <select
                   value={formData.grade}
@@ -85,7 +85,7 @@ export function CreateClassModal({ isOpen, onClose, onSubmit }: CreateClassModal
                   className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                   required
                 >
-                  <option value="">Select grade</option>
+                  <option value="">Selecione a série</option>
                   {grades.map((grade) => (
                     <option key={grade} value={grade}>
                       {grade}
@@ -96,7 +96,7 @@ export function CreateClassModal({ isOpen, onClose, onSubmit }: CreateClassModal
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
-                  Subject
+                  Disciplina
                 </label>
                 <select
                   value={formData.subject}
@@ -104,7 +104,7 @@ export function CreateClassModal({ isOpen, onClose, onSubmit }: CreateClassModal
                   className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                   required
                 >
-                  <option value="">Select subject</option>
+                  <option value="">Selecione a disciplina</option>
                   {subjects.map((subject) => (
                     <option key={subject} value={subject}>
                       {subject}
@@ -115,7 +115,7 @@ export function CreateClassModal({ isOpen, onClose, onSubmit }: CreateClassModal
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
-                  School Year
+                  Ano Letivo
                 </label>
                 <select
                   value={formData.schoolYear}
@@ -132,12 +132,12 @@ export function CreateClassModal({ isOpen, onClose, onSubmit }: CreateClassModal
 
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">
-                  Description (optional)
+                  Descrição (opcional)
                 </label>
                 <textarea
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  placeholder="Brief description of the class..."
+                  placeholder="Breve descrição da turma..."
                   rows={3}
                   className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                 />
@@ -147,10 +147,10 @@ export function CreateClassModal({ isOpen, onClose, onSubmit }: CreateClassModal
             {/* Footer */}
             <div className="flex justify-end gap-3 p-6 border-t border-border">
               <Button variant="outline" onClick={onClose}>
-                Cancel
+                Cancelar
               </Button>
               <Button onClick={handleSubmit} className="min-w-[100px]">
-                Create Class
+                Criar Turma
               </Button>
             </div>
           </motion.div>

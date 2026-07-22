@@ -52,7 +52,7 @@ export default function Activities() {
   if (isGenerating) {
     return (
       <div className="space-y-6">
-        <h1 className="text-4xl font-bold text-foreground">Generating Assessment</h1>
+        <h1 className="text-4xl font-bold text-foreground">Gerando Avaliação</h1>
         <AssessmentProgress currentStep={currentStep} progress={progress} />
       </div>
     );

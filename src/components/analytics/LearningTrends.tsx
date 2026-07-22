@@ -37,7 +37,7 @@ export function LearningTrends({ trends }: LearningTrendsProps) {
 
   return (
     <div className="rounded-3xl border border-border bg-card p-6 shadow-md">
-      <h2 className="text-xl font-bold text-foreground mb-6">Learning Trends</h2>
+      <h2 className="text-xl font-bold text-foreground mb-6">Tendências de Aprendizagem</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {trends.map((trend, index) => (
           <motion.div

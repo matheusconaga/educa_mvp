@@ -99,7 +99,7 @@ export default function Classes() {
 
       {filteredClasses.length === 0 && (
         <div className="text-center py-12 text-muted-foreground">
-          No classes found matching your search.
+          Nenhuma turma encontrada com sua pesquisa.
         </div>
       )}
 

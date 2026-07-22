@@ -13,7 +13,7 @@ export function AICopilotPanel({ messages, onAction }: AICopilotPanelProps) {
     <div className="rounded-3xl border border-primary/20 bg-primary/5 p-6 shadow-md">
       <div className="flex items-center gap-2 mb-6">
         <Bot className="h-5 w-5 text-primary" />
-        <h2 className="text-xl font-bold text-foreground">AI Copilot</h2>
+        <h2 className="text-xl font-bold text-foreground">Copiloto IA</h2>
         <Sparkles className="h-4 w-4 text-primary animate-pulse" />
       </div>
 

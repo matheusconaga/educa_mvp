@@ -15,9 +15,9 @@ export function DocumentHistory({ documents, onDelete }: DocumentHistoryProps) {
     return (
       <div className="rounded-3xl border border-border bg-card p-12 shadow-md text-center">
         <FileText className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-        <h3 className="text-lg font-semibold text-foreground mb-2">No documents yet</h3>
+        <h3 className="text-lg font-semibold text-foreground mb-2">Nenhum documento ainda</h3>
         <p className="text-sm text-muted-foreground">
-          Upload your first document to get started with AI-powered analysis.
+          Envie seu primeiro documento para começar com a análise alimentada por IA.
         </p>
       </div>
     );
@@ -26,9 +26,9 @@ export function DocumentHistory({ documents, onDelete }: DocumentHistoryProps) {
   return (
     <div className="rounded-3xl border border-border bg-card shadow-md overflow-hidden">
       <div className="p-6 border-b border-border">
-        <h2 className="text-xl font-bold text-foreground">Document History</h2>
+        <h2 className="text-xl font-bold text-foreground">Histórico de Documentos</h2>
         <p className="text-sm text-muted-foreground mt-1">
-          {documents.length} document{documents.length !== 1 ? "s" : ""} uploaded
+          {documents.length} documento{documents.length !== 1 ? "s" : ""} enviado{documents.length !== 1 ? "s" : ""}
         </p>
       </div>
 

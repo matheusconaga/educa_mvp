@@ -14,7 +14,7 @@ export function AssessmentHistory({ isOpen, onClose, onSelect }: AssessmentHisto
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
+    return date.toLocaleDateString("pt-BR", {
       month: "short",
       day: "numeric",
       year: "numeric",
@@ -26,7 +26,7 @@ export function AssessmentHistory({ isOpen, onClose, onSelect }: AssessmentHisto
       <div className="bg-card rounded-3xl shadow-xl max-w-2xl w-full max-h-[80vh] overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-border">
-          <h2 className="text-xl font-bold text-foreground">Assessment History</h2>
+          <h2 className="text-xl font-bold text-foreground">Histórico de Avaliações</h2>
           <Button variant="ghost" size="sm" onClick={onClose}>
             <X className="h-5 w-5" />
           </Button>
@@ -37,7 +37,7 @@ export function AssessmentHistory({ isOpen, onClose, onSelect }: AssessmentHisto
           {mockAssessmentHistory.length === 0 ? (
             <div className="text-center py-12">
               <FileText className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">No assessments generated yet.</p>
+              <p className="text-muted-foreground">Nenhuma avaliação gerada ainda.</p>
             </div>
           ) : (
             <div className="space-y-3">
@@ -75,7 +75,7 @@ export function AssessmentHistory({ isOpen, onClose, onSelect }: AssessmentHisto
         {/* Footer */}
         <div className="flex justify-end p-6 border-t border-border">
           <Button variant="outline" onClick={onClose}>
-            Close
+            Fechar
           </Button>
         </div>
       </div>

@@ -8,15 +8,15 @@ interface HelpDropdownProps {
 
 export function HelpDropdown({ isOpen, onClose }: HelpDropdownProps) {
   const documentationItems = [
-    { icon: Book, label: "Documentation", description: "Learn how to use EducAssist" },
-    { icon: Video, label: "Tutorials", description: "Video guides and walkthroughs" },
-    { icon: HelpCircle, label: "FAQ", description: "Frequently asked questions" },
+    { icon: Book, label: "Documentação", description: "Aprenda a usar o EducAssist" },
+    { icon: Video, label: "Tutoriais", description: "Guias em vídeo e demonstrações" },
+    { icon: HelpCircle, label: "FAQ", description: "Perguntas frequentes" },
   ];
 
   const supportItems = [
-    { icon: MessageSquare, label: "Contact Support", description: "Get help from our team" },
-    { icon: Bug, label: "Report a Bug", description: "Report issues or feedback" },
-    { icon: Info, label: "About EducAssist", description: "Learn more about us" },
+    { icon: MessageSquare, label: "Contatar Suporte", description: "Obtenha ajuda da nossa equipe" },
+    { icon: Bug, label: "Relatar Bug", description: "Relate problemas ou feedback" },
+    { icon: Info, label: "Sobre o EducAssist", description: "Saiba mais sobre nós" },
   ];
 
   if (!isOpen) return null;
@@ -31,13 +31,13 @@ export function HelpDropdown({ isOpen, onClose }: HelpDropdownProps) {
         className="absolute right-0 top-full mt-2 w-80 bg-card/95 backdrop-blur-sm border border-border/50 rounded-2xl shadow-xl z-50 overflow-hidden"
       >
         <div className="p-4 border-b border-border/50">
-          <h3 className="font-semibold text-foreground">Help</h3>
+          <h3 className="font-semibold text-foreground">Ajuda</h3>
         </div>
 
         <div className="p-2">
           {/* Documentation Section */}
           <div className="mb-1">
-            <p className="px-3 py-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wider">Documentation</p>
+            <p className="px-3 py-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wider">Documentação</p>
             {documentationItems.map((item) => {
               const Icon = item.icon;
               return (
@@ -59,7 +59,7 @@ export function HelpDropdown({ isOpen, onClose }: HelpDropdownProps) {
 
           {/* Support Section */}
           <div className="pt-2 border-t border-border/50 mt-2">
-            <p className="px-3 py-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wider">Support</p>
+            <p className="px-3 py-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wider">Suporte</p>
             {supportItems.map((item) => {
               const Icon = item.icon;
               return (

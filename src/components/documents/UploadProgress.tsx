@@ -8,23 +8,23 @@ interface UploadProgressProps {
 }
 
 const stepLabels: Record<ProcessingStep, string> = {
-  uploading: "Uploading...",
-  validating: "Validating document...",
-  reading: "Reading content...",
-  extracting: "Extracting educational topics...",
-  mapping: "Mapping competencies...",
-  generating: "Generating AI insights...",
-  completed: "Completed",
+  uploading: "Enviando...",
+  validating: "Validando documento...",
+  reading: "Lendo conteúdo...",
+  extracting: "Extraindo tópicos educacionais...",
+  mapping: "Mapeando competências...",
+  generating: "Gerando insights da IA...",
+  completed: "Concluído",
 };
 
 const stepDescriptions: Record<ProcessingStep, string> = {
-  uploading: "Uploading your document to our secure servers",
-  validating: "Validating file format and structure",
-  reading: "Analyzing document structure and content",
-  extracting: "Identifying key topics and learning objectives",
-  mapping: "Mapping to educational competencies",
-  generating: "Creating AI-powered educational insights",
-  completed: "Your document has been successfully analyzed",
+  uploading: "Enviando seu documento para nossos servidores seguros",
+  validating: "Validando formato e estrutura do arquivo",
+  reading: "Analisando estrutura e conteúdo do documento",
+  extracting: "Identificando tópicos principais e objetivos de aprendizagem",
+  mapping: "Mapeando para competências educacionais",
+  generating: "Criando insights educacionais alimentados por IA",
+  completed: "Seu documento foi analisado com sucesso",
 };
 
 export function UploadProgress({ currentStep, progress }: UploadProgressProps) {

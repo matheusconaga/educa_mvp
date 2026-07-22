@@ -23,7 +23,7 @@ export function ClassComparison({ comparisons }: ClassComparisonProps) {
 
   return (
     <div className="rounded-3xl border border-border bg-card p-6 shadow-md">
-      <h2 className="text-xl font-bold text-foreground mb-6">Class Comparison</h2>
+      <h2 className="text-xl font-bold text-foreground mb-6">Comparação de Turmas</h2>
       <div className="space-y-4">
         {comparisons.map((comparison, index) => (
           <motion.div
@@ -44,13 +44,13 @@ export function ClassComparison({ comparisons }: ClassComparisonProps) {
                     {comparison.healthStatus.charAt(0).toUpperCase() + comparison.healthStatus.slice(1)}
                   </span>
                   <span className="text-sm text-muted-foreground">
-                    Health Score: {comparison.healthScore}/100
+                    Pontuação de Saúde: {comparison.healthScore}/100
                   </span>
                 </div>
               </div>
               <div className="text-right">
                 <div className="text-2xl font-bold text-primary">{comparison.averagePerformance}%</div>
-                <div className="text-sm text-muted-foreground">Performance</div>
+                <div className="text-sm text-muted-foreground">Desempenho</div>
               </div>
             </div>
 
@@ -58,28 +58,28 @@ export function ClassComparison({ comparisons }: ClassComparisonProps) {
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4 text-muted-foreground" />
                 <div>
-                  <p className="text-xs text-muted-foreground">Participation</p>
+                  <p className="text-xs text-muted-foreground">Participação</p>
                   <p className="text-sm font-semibold text-foreground">{comparison.participation}%</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-muted-foreground" />
                 <div>
-                  <p className="text-xs text-muted-foreground">Assignments</p>
+                  <p className="text-xs text-muted-foreground">Trabalhos</p>
                   <p className="text-sm font-semibold text-foreground">{comparison.assignmentCompletion}%</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="h-4 w-4 text-muted-foreground" />
                 <div>
-                  <p className="text-xs text-muted-foreground">Assessments</p>
+                  <p className="text-xs text-muted-foreground">Avaliações</p>
                   <p className="text-sm font-semibold text-foreground">{comparison.assessmentResults}%</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <TrendingUp className="h-4 w-4 text-muted-foreground" />
                 <div>
-                  <p className="text-xs text-muted-foreground">Learning Pace</p>
+                  <p className="text-xs text-muted-foreground">Ritmo de Aprendizagem</p>
                   <p className="text-sm font-semibold text-foreground">{comparison.learningPace}%</p>
                 </div>
               </div>

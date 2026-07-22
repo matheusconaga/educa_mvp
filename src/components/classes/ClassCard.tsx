@@ -41,15 +41,15 @@ export function ClassCard({
   const getStatusMessage = (status: Class["status"]) => {
     switch (status) {
       case "healthy":
-        return "Students are progressing normally.";
+        return "Os alunos estão progredindo normalmente.";
       case "warning":
         return classData.criticalTopic
-          ? `Many students struggling with ${classData.criticalTopic}.`
-          : "Some students need attention.";
+          ? `Muitos alunos com dificuldade em ${classData.criticalTopic}.`
+          : "Alguns alunos precisam de atenção.";
       case "critical":
         return classData.criticalTopic
-          ? `Low engagement detected. Critical: ${classData.criticalTopic}.`
-          : "Critical issues detected.";
+          ? `Baixa engajamento detectado. Crítico: ${classData.criticalTopic}.`
+          : "Problemas críticos detectados.";
     }
   };
 
@@ -84,21 +84,21 @@ export function ClassCard({
         <div className="flex items-center gap-2">
           <Users className="h-4 w-4 text-muted-foreground" />
           <div>
-            <p className="text-xs text-muted-foreground">Students</p>
+            <p className="text-xs text-muted-foreground">Alunos</p>
             <p className="text-sm font-semibold text-foreground">{classData.students}</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
           <TrendingUp className="h-4 w-4 text-muted-foreground" />
           <div>
-            <p className="text-xs text-muted-foreground">Average</p>
+            <p className="text-xs text-muted-foreground">Média</p>
             <p className="text-sm font-semibold text-foreground">{classData.averagePerformance}%</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
           <Clock className="h-4 w-4 text-muted-foreground" />
           <div>
-            <p className="text-xs text-muted-foreground">Next Lesson</p>
+            <p className="text-xs text-muted-foreground">Próxima Aula</p>
             <p className="text-sm font-semibold text-foreground truncate">{classData.nextLesson || "—"}</p>
           </div>
         </div>
@@ -117,7 +117,7 @@ export function ClassCard({
       {classData.recentActivity && (
         <div className="flex items-center gap-2 mb-4 text-sm">
           <BookOpen className="h-4 w-4 text-muted-foreground" />
-          <span className="text-muted-foreground">Recent: </span>
+          <span className="text-muted-foreground">Recente: </span>
           <span className="text-foreground">{classData.recentActivity}</span>
         </div>
       )}
@@ -132,22 +132,22 @@ export function ClassCard({
               <div className="flex gap-2">
                 {aiInsight.action === "generate-lesson" && (
                   <Button variant="outline" size="sm" onClick={onGenerateLesson}>
-                    Generate Lesson Plan
+                    Gerar Plano de Aula
                   </Button>
                 )}
                 {aiInsight.action === "generate-activity" && (
                   <Button variant="outline" size="sm" onClick={onGenerateActivity}>
-                    Generate Activity
+                    Gerar Atividade
                   </Button>
                 )}
                 {aiInsight.action === "generate-assessment" && (
                   <Button variant="outline" size="sm" onClick={onGenerateAssessment}>
-                    Generate Assessment
+                    Gerar Avaliação
                   </Button>
                 )}
                 {aiInsight.action === "view-analytics" && (
                   <Button variant="outline" size="sm" onClick={onViewAnalytics}>
-                    View Analytics
+                    Ver Inteligência Educacional
                   </Button>
                 )}
               </div>
@@ -159,13 +159,13 @@ export function ClassCard({
       {/* Actions */}
       <div className="flex gap-2">
         <Button variant="outline" size="sm" onClick={onViewDetails} className="flex-1">
-          View Details
+          Ver Detalhes
         </Button>
         <Button variant="ghost" size="sm" onClick={onEdit}>
-          Edit
+          Editar
         </Button>
         <Button variant="ghost" size="sm" onClick={onDelete}>
-          Delete
+          Excluir
         </Button>
       </div>
     </motion.div>

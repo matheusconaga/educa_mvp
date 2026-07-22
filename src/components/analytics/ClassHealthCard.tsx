@@ -53,49 +53,49 @@ export function ClassHealthCard({ health, onViewDetails }: ClassHealthCardProps)
         <div className="flex items-center gap-2">
           <TrendingUp className="h-4 w-4 text-muted-foreground" />
           <div className="flex-1">
-            <p className="text-xs text-muted-foreground">Learning</p>
+            <p className="text-xs text-muted-foreground">Aprendizagem</p>
             <p className="text-sm font-semibold text-foreground">{health.learningScore}%</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
           <Users className="h-4 w-4 text-muted-foreground" />
           <div className="flex-1">
-            <p className="text-xs text-muted-foreground">Participation</p>
+            <p className="text-xs text-muted-foreground">Participação</p>
             <p className="text-sm font-semibold text-foreground">{health.participationScore}%</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
           <CheckCircle className="h-4 w-4 text-muted-foreground" />
           <div className="flex-1">
-            <p className="text-xs text-muted-foreground">Assignments</p>
+            <p className="text-xs text-muted-foreground">Trabalhos</p>
             <p className="text-sm font-semibold text-foreground">{health.assignmentScore}%</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
           <Award className="h-4 w-4 text-muted-foreground" />
           <div className="flex-1">
-            <p className="text-xs text-muted-foreground">Assessments</p>
+            <p className="text-xs text-muted-foreground">Avaliações</p>
             <p className="text-sm font-semibold text-foreground">{health.assessmentScore}%</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
           <Brain className="h-4 w-4 text-muted-foreground" />
           <div className="flex-1">
-            <p className="text-xs text-muted-foreground">Engagement</p>
+            <p className="text-xs text-muted-foreground">Engajamento</p>
             <p className="text-sm font-semibold text-foreground">{health.engagementScore}%</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
           <Calendar className="h-4 w-4 text-muted-foreground" />
           <div className="flex-1">
-            <p className="text-xs text-muted-foreground">Attendance</p>
+            <p className="text-xs text-muted-foreground">Frequência</p>
             <p className="text-sm font-semibold text-foreground">{health.attendanceScore}%</p>
           </div>
         </div>
       </div>
 
       <Button variant="outline" size="sm" onClick={() => onViewDetails(health)} className="w-full">
-        View Detailed Analysis
+        Ver Análise Detalhada
       </Button>
     </motion.div>
   );

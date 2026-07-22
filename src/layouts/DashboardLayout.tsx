@@ -36,16 +36,16 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   const navigation = [
     { name: "Dashboard", href: "/", icon: LayoutDashboard },
-    { name: "Classes", href: "/classes", icon: BookOpen },
-    { name: "Documents", href: "/documents", icon: FileText },
-    { name: "Lesson Plans", href: "/lesson-plans", icon: ClipboardList },
-    { name: "Activities", href: "/activities", icon: Sparkles },
-    { name: "Analytics", href: "/analytics", icon: ChartColumn },
+    { name: "Turmas", href: "/classes", icon: BookOpen },
+    { name: "Documentos", href: "/documents", icon: FileText },
+    { name: "Planos de Aula", href: "/lesson-plans", icon: ClipboardList },
+    { name: "Atividades", href: "/activities", icon: Sparkles },
+    { name: "Inteligência Educacional", href: "/analytics", icon: ChartColumn },
   ];
 
   const bottomNavigation = [
-    { name: "Settings", href: "/settings", icon: Settings },
-    { name: "Support", href: "/support", icon: LifeBuoy },
+    { name: "Configurações", href: "/settings", icon: Settings },
+    { name: "Suporte", href: "/support", icon: LifeBuoy },
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -76,7 +76,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
             <button
               onClick={() => setSidebarOpen(false)}
               className="lg:hidden p-2 rounded-lg hover:bg-muted/50 transition-colors text-muted-foreground hover:text-foreground"
-              aria-label="Close sidebar"
+              aria-label="Fechar menu lateral"
             >
               <X className="h-5 w-5" />
             </button>
@@ -170,7 +170,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           <button
             onClick={() => setSidebarOpen(true)}
             className="lg:hidden p-2 rounded-lg hover:bg-muted/50 transition-colors text-muted-foreground hover:text-foreground min-h-[44px] min-w-[44px]"
-            aria-label="Open sidebar"
+            aria-label="Abrir menu lateral"
           >
             <Menu className="h-5 w-5" />
           </button>
@@ -185,7 +185,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   setUserMenuOpen(false);
                 }}
                 className="hover:cursor-pointer relative p-2.5 rounded-xl hover:bg-muted/50 transition-all duration-200 text-muted-foreground hover:text-foreground group min-h-[44px] min-w-[44px] md:min-h-0 md:min-w-0"
-                aria-label="Notifications"
+                aria-label="Notificações"
               >
                 <Bell className="h-5 w-5 transition-transform group-hover:scale-110" />
                 <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary ring-2 ring-card" />
@@ -202,7 +202,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   setUserMenuOpen(false);
                 }}
                 className="hover:cursor-pointer p-2.5 rounded-xl hover:bg-muted/50 transition-all duration-200 text-muted-foreground hover:text-foreground group min-h-[44px] min-w-[44px] md:min-h-0 md:min-w-0"
-                aria-label="Help"
+                aria-label="Ajuda"
               >
                 <HelpCircle className="h-5 w-5 transition-transform group-hover:scale-110" />
               </button>
@@ -218,7 +218,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                   setHelpOpen(false);
                 }}
                 className="hover:cursor-pointer flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-200 ring-2 ring-transparent hover:ring-primary/20 min-h-[44px] min-w-[44px] md:min-h-0 md:min-w-0"
-                aria-label="User menu"
+                aria-label="Menu do usuário"
               >
                 <span className="text-sm font-semibold text-primary">M</span>
               </button>

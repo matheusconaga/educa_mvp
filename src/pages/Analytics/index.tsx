@@ -77,9 +77,9 @@ export default function Analytics() {
     <div className="space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-4xl font-bold text-foreground">Learning Intelligence</h1>
+        <h1 className="text-4xl font-bold text-foreground">Inteligência Educacional</h1>
         <p className="text-muted-foreground mt-1">
-          Understand learning trends, identify educational patterns and receive strategic AI recommendations.
+          Entenda tendências de aprendizagem, identifique padrões educacionais e receba recomendações estratégicas da IA.
         </p>
       </div>
 
@@ -133,7 +133,7 @@ export default function Analytics() {
 
           {/* Learning Predictions */}
           <div className="rounded-3xl border border-border bg-card p-6 shadow-md">
-            <h2 className="text-xl font-bold text-foreground mb-4">Learning Predictions</h2>
+            <h2 className="text-xl font-bold text-foreground mb-4">Previsões de Aprendizagem</h2>
             <div className="space-y-3">
               {mockLearningPredictions.map((prediction) => (
                 <PredictionCard
@@ -147,7 +147,7 @@ export default function Analytics() {
 
           {/* Educational Recommendations */}
           <div className="rounded-3xl border border-border bg-card p-6 shadow-md">
-            <h2 className="text-xl font-bold text-foreground mb-4">Recommendations</h2>
+            <h2 className="text-xl font-bold text-foreground mb-4">Recomendações</h2>
             <div className="space-y-3">
               {mockEducationalRecommendations.map((recommendation) => (
                 <RecommendationCard
@@ -165,7 +165,7 @@ export default function Analytics() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Class Health */}
         <div className="rounded-3xl border border-border bg-card p-6 shadow-md">
-          <h2 className="text-xl font-bold text-foreground mb-4">Class Health</h2>
+          <h2 className="text-xl font-bold text-foreground mb-4">Saúde da Turma</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {mockClassHealth.map((health) => (
               <ClassHealthCard

@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export default function Settings() {
   const [settings, setSettings] = useState({
     theme: "system",
-    language: "english",
+    language: "português",
     emailNotifications: true,
     systemNotifications: true,
     lessonPlanAlerts: true,
@@ -36,9 +36,9 @@ export default function Settings() {
     <div className="max-w-4xl mx-auto space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-4xl font-bold text-foreground">Settings</h1>
+        <h1 className="text-4xl font-bold text-foreground">Configurações</h1>
         <p className="text-muted-foreground mt-1">
-          Manage your preferences, notifications and account.
+          Gerencie suas preferências, notificações e conta.
         </p>
       </div>
 
@@ -51,12 +51,12 @@ export default function Settings() {
       >
         <div className="flex items-center gap-3 mb-6">
           <Palette className="h-5 w-5 text-primary" />
-          <h2 className="text-xl font-bold text-foreground">Appearance</h2>
+          <h2 className="text-xl font-bold text-foreground">Aparência</h2>
         </div>
 
         <div className="space-y-4">
           <div>
-            <label className="text-sm font-medium text-foreground mb-2 block">Theme</label>
+            <label className="text-sm font-medium text-foreground mb-2 block">Tema</label>
             <div className="flex gap-3">
               {["light", "dark", "system"].map((theme) => (
                 <button
@@ -86,19 +86,19 @@ export default function Settings() {
       >
         <div className="flex items-center gap-3 mb-6">
           <Globe className="h-5 w-5 text-primary" />
-          <h2 className="text-xl font-bold text-foreground">Language</h2>
+          <h2 className="text-xl font-bold text-foreground">Idioma</h2>
         </div>
 
         <div>
-          <label className="text-sm font-medium text-foreground mb-2 block">Language</label>
+          <label className="text-sm font-medium text-foreground mb-2 block">Idioma</label>
           <select
             value={settings.language}
             onChange={(e) => setSettings({ ...settings, language: e.target.value })}
             className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
           >
-            <option value="english">English</option>
             <option value="portuguese">Português</option>
-            <option value="spanish">Español</option>
+            <option value="english">Inglês</option>
+            <option value="spanish">Espanhol</option>
           </select>
         </div>
       </motion.div>
@@ -112,18 +112,18 @@ export default function Settings() {
       >
         <div className="flex items-center gap-3 mb-6">
           <Mail className="h-5 w-5 text-primary" />
-          <h2 className="text-xl font-bold text-foreground">Notifications</h2>
+          <h2 className="text-xl font-bold text-foreground">Notificações</h2>
         </div>
 
         <div className="space-y-4">
           {[
-            { key: "emailNotifications", label: "Email Notifications" },
-            { key: "systemNotifications", label: "System Notifications" },
-            { key: "lessonPlanAlerts", label: "Lesson Plan Alerts" },
-            { key: "activityAlerts", label: "Activity Alerts" },
-            { key: "documentProcessing", label: "Document Processing" },
-            { key: "weeklySummary", label: "Weekly Summary" },
-            { key: "marketingEmails", label: "Marketing Emails" },
+            { key: "emailNotifications", label: "Notificações por E-mail" },
+            { key: "systemNotifications", label: "Notificações do Sistema" },
+            { key: "lessonPlanAlerts", label: "Alertas de Planos de Aula" },
+            { key: "activityAlerts", label: "Alertas de Atividades" },
+            { key: "documentProcessing", label: "Processamento de Documentos" },
+            { key: "weeklySummary", label: "Resumo Semanal" },
+            { key: "marketingEmails", label: "E-mails de Marketing" },
           ].map((item) => (
             <div key={item.key} className="flex items-center justify-between">
               <span className="text-sm text-foreground">{item.label}</span>
@@ -155,7 +155,7 @@ export default function Settings() {
       >
         <div className="flex items-center gap-3 mb-6">
           <User className="h-5 w-5 text-primary" />
-          <h2 className="text-xl font-bold text-foreground">Account</h2>
+          <h2 className="text-xl font-bold text-foreground">Conta</h2>
         </div>
 
         <div className="space-y-4">
@@ -171,7 +171,7 @@ export default function Settings() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="text-sm font-medium text-foreground mb-2 block">Teacher Name</label>
+              <label className="text-sm font-medium text-foreground mb-2 block">Nome do Professor</label>
               <input
                 type="text"
                 defaultValue="Matheus"
@@ -179,7 +179,7 @@ export default function Settings() {
               />
             </div>
             <div>
-              <label className="text-sm font-medium text-foreground mb-2 block">Email</label>
+              <label className="text-sm font-medium text-foreground mb-2 block">E-mail</label>
               <input
                 type="email"
                 defaultValue="matheus@educassist.com"
@@ -187,7 +187,7 @@ export default function Settings() {
               />
             </div>
             <div>
-              <label className="text-sm font-medium text-foreground mb-2 block">School</label>
+              <label className="text-sm font-medium text-foreground mb-2 block">Escola</label>
               <input
                 type="text"
                 defaultValue="EducAssist School"
@@ -195,7 +195,7 @@ export default function Settings() {
               />
             </div>
             <div>
-              <label className="text-sm font-medium text-foreground mb-2 block">Role</label>
+              <label className="text-sm font-medium text-foreground mb-2 block">Cargo</label>
               <input
                 type="text"
                 defaultValue="Teacher"
@@ -207,11 +207,11 @@ export default function Settings() {
           <div className="flex gap-3 pt-4">
             <Button variant="outline" className="flex-1">
               <Edit className="h-4 w-4 mr-2" />
-              Edit Profile
+              Editar Perfil
             </Button>
             <Button variant="outline" className="flex-1">
               <Lock className="h-4 w-4 mr-2" />
-              Change Password
+              Alterar Senha
             </Button>
           </div>
         </div>
@@ -226,12 +226,12 @@ export default function Settings() {
       >
         <div className="flex items-center gap-3 mb-6">
           <FileText className="h-5 w-5 text-primary" />
-          <h2 className="text-xl font-bold text-foreground">Application</h2>
+          <h2 className="text-xl font-bold text-foreground">Aplicativo</h2>
         </div>
 
         <div className="space-y-4">
           <div>
-            <label className="text-sm font-medium text-foreground mb-2 block">Default Export</label>
+            <label className="text-sm font-medium text-foreground mb-2 block">Exportação Padrão</label>
             <div className="flex gap-3">
               {["pdf", "docx"].map((format) => (
                 <button
@@ -251,7 +251,7 @@ export default function Settings() {
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-sm text-foreground">Animations</span>
+            <span className="text-sm text-foreground">Animações</span>
             <button
               onClick={() => setSettings({ ...settings, animations: !settings.animations })}
               className={cn(
@@ -269,7 +269,7 @@ export default function Settings() {
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-sm text-foreground">Compact Mode</span>
+            <span className="text-sm text-foreground">Modo Compacto</span>
             <button
               onClick={() => setSettings({ ...settings, compactMode: !settings.compactMode })}
               className={cn(
@@ -297,25 +297,25 @@ export default function Settings() {
       >
         <div className="flex items-center gap-3 mb-6">
           <Accessibility className="h-5 w-5 text-primary" />
-          <h2 className="text-xl font-bold text-foreground">Accessibility</h2>
+          <h2 className="text-xl font-bold text-foreground">Acessibilidade</h2>
         </div>
 
         <div className="space-y-4">
           <div>
-            <label className="text-sm font-medium text-foreground mb-2 block">Font Size</label>
+            <label className="text-sm font-medium text-foreground mb-2 block">Tamanho da Fonte</label>
             <select
               value={settings.fontSize}
               onChange={(e) => setSettings({ ...settings, fontSize: e.target.value })}
               className="w-full px-4 py-2 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
             >
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
+              <option value="small">Pequeno</option>
+              <option value="medium">Médio</option>
+              <option value="large">Grande</option>
             </select>
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-sm text-foreground">High Contrast</span>
+            <span className="text-sm text-foreground">Alto Contraste</span>
             <button
               onClick={() => setSettings({ ...settings, highContrast: !settings.highContrast })}
               className={cn(
@@ -333,7 +333,7 @@ export default function Settings() {
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-sm text-foreground">Reduced Motion</span>
+            <span className="text-sm text-foreground">Movimento Reduzido</span>
             <button
               onClick={() => setSettings({ ...settings, reducedMotion: !settings.reducedMotion })}
               className={cn(
@@ -361,12 +361,12 @@ export default function Settings() {
       >
         <div className="flex items-center gap-3 mb-6">
           <Shield className="h-5 w-5 text-primary" />
-          <h2 className="text-xl font-bold text-foreground">Privacy</h2>
+          <h2 className="text-xl font-bold text-foreground">Privacidade</h2>
         </div>
 
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <span className="text-sm text-foreground">Two-factor Authentication</span>
+            <span className="text-sm text-foreground">Autenticação em Dois Fatores</span>
             <button
               onClick={() => setSettings({ ...settings, twoFactorAuth: !settings.twoFactorAuth })}
               className={cn(
@@ -385,10 +385,10 @@ export default function Settings() {
 
           <div className="flex gap-3">
             <Button variant="outline" className="flex-1">
-              Manage Sessions
+              Gerenciar Sessões
             </Button>
             <Button variant="outline" className="flex-1 text-red-600 hover:bg-red-500/10">
-              Delete Account
+              Excluir Conta
             </Button>
           </div>
         </div>
@@ -403,11 +403,11 @@ export default function Settings() {
       >
         <Button variant="outline" onClick={handleCancel}>
           <X className="h-4 w-4 mr-2" />
-          Cancel
+          Cancelar
         </Button>
         <Button onClick={handleSave}>
           <Save className="h-4 w-4 mr-2" />
-          Save Changes
+          Salvar Alterações
         </Button>
       </motion.div>
     </div>

@@ -11,7 +11,7 @@ interface CurriculumCoverageProps {
 export function CurriculumCoverage({ coverage, onTopicClick }: CurriculumCoverageProps) {
   return (
     <div className="rounded-3xl border border-border bg-card p-6 shadow-md">
-      <h2 className="text-xl font-bold text-foreground mb-6">Curriculum Coverage</h2>
+      <h2 className="text-xl font-bold text-foreground mb-6">Cobertura do Currículo</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         {/* Progress */}
@@ -23,7 +23,7 @@ export function CurriculumCoverage({ coverage, onTopicClick }: CurriculumCoverag
         >
           <div className="flex items-center gap-2 mb-3">
             <Calendar className="h-5 w-5 text-primary" />
-            <h3 className="font-semibold text-foreground">Annual Planning Progress</h3>
+            <h3 className="font-semibold text-foreground">Progresso do Planejamento Anual</h3>
           </div>
           <div className="text-4xl font-bold text-primary mb-2">{coverage.progressPercentage}%</div>
           <div className="w-full bg-border rounded-full h-2 mb-3">
@@ -33,7 +33,7 @@ export function CurriculumCoverage({ coverage, onTopicClick }: CurriculumCoverag
             />
           </div>
           <div className="text-sm text-muted-foreground">
-            Estimated completion: {coverage.estimatedCompletion}
+            Conclusão estimada: {coverage.estimatedCompletion}
           </div>
         </motion.div>
 
@@ -48,14 +48,14 @@ export function CurriculumCoverage({ coverage, onTopicClick }: CurriculumCoverag
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-green-500" />
-                <span className="text-sm text-muted-foreground">Topics Completed</span>
+                <span className="text-sm text-muted-foreground">Tópicos Concluídos</span>
               </div>
               <span className="font-semibold text-foreground">{coverage.topicsCompleted}</span>
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-orange-500" />
-                <span className="text-sm text-muted-foreground">Remaining Topics</span>
+                <span className="text-sm text-muted-foreground">Tópicos Restantes</span>
               </div>
               <span className="font-semibold text-foreground">{coverage.remainingTopics}</span>
             </div>
@@ -65,7 +65,7 @@ export function CurriculumCoverage({ coverage, onTopicClick }: CurriculumCoverag
 
       {/* Upcoming Priority Topics */}
       <div>
-        <h3 className="font-semibold text-foreground mb-3">Upcoming Priority Topics</h3>
+        <h3 className="font-semibold text-foreground mb-3">Próximos Tópicos Prioritários</h3>
         <div className="flex flex-wrap gap-2">
           {coverage.upcomingPriorityTopics.map((topic) => (
             <Button

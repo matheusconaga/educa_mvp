@@ -13,7 +13,7 @@ export function MonthlyReport({ report, onExportPDF, onExportDOCX }: MonthlyRepo
   return (
     <div className="rounded-3xl border border-border bg-card p-6 shadow-md">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-bold text-foreground">Monthly AI Report</h2>
+        <h2 className="text-xl font-bold text-foreground">Relatório Mensal da IA</h2>
         <div className="flex gap-2">
           <Button variant="outline" size="sm" onClick={onExportPDF}>
             <Download className="h-4 w-4 mr-2" />
@@ -36,7 +36,7 @@ export function MonthlyReport({ report, onExportPDF, onExportDOCX }: MonthlyRepo
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">
               <Clock className="h-4 w-4" />
-              <span>Time Saved: {report.estimatedTimeSaved}</span>
+              <span>Tempo Economizado: {report.estimatedTimeSaved}</span>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ export function MonthlyReport({ report, onExportPDF, onExportDOCX }: MonthlyRepo
         <div>
           <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
             <CheckCircle className="h-4 w-4 text-green-500" />
-            Strengths
+            Pontos Fortes
           </h4>
           <ul className="space-y-2">
             {report.strengths.map((strength, index) => (
@@ -67,7 +67,7 @@ export function MonthlyReport({ report, onExportPDF, onExportDOCX }: MonthlyRepo
         <div>
           <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
             <XCircle className="h-4 w-4 text-red-500" />
-            Weaknesses
+            Pontos Fracos
           </h4>
           <ul className="space-y-2">
             {report.weaknesses.map((weakness, index) => (
@@ -90,7 +90,7 @@ export function MonthlyReport({ report, onExportPDF, onExportDOCX }: MonthlyRepo
           <div>
             <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
               <XCircle className="h-4 w-4 text-orange-500" />
-              Most Difficult Topics
+              Tópicos Mais Difíceis
             </h4>
             <div className="space-y-2">
               {report.mostDifficultTopics.map((topic, index) => (
@@ -106,7 +106,7 @@ export function MonthlyReport({ report, onExportPDF, onExportDOCX }: MonthlyRepo
           <div>
             <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
               <Star className="h-4 w-4 text-green-500" />
-              Most Successful Topics
+              Tópicos Mais Bem-Sucedidos
             </h4>
             <div className="space-y-2">
               {report.mostSuccessfulTopics.map((topic, index) => (
@@ -125,7 +125,7 @@ export function MonthlyReport({ report, onExportPDF, onExportDOCX }: MonthlyRepo
         <div>
           <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
             <TrendingUp className="h-4 w-4 text-primary" />
-            Recommended Actions
+            Ações Recomendadas
           </h4>
           <ul className="space-y-2">
             {report.recommendedActions.map((action, index) => (
@@ -147,7 +147,7 @@ export function MonthlyReport({ report, onExportPDF, onExportDOCX }: MonthlyRepo
         <div>
           <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
             <Star className="h-4 w-4 text-yellow-500" />
-            Educational Highlights
+            Destaques Educacionais
           </h4>
           <ul className="space-y-2">
             {report.educationalHighlights.map((highlight, index) => (

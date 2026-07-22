@@ -21,7 +21,7 @@ export function KnowledgeGapCard({ gap, onAction }: KnowledgeGapCardProps) {
           <h3 className="font-semibold text-foreground text-lg mb-1">{gap.className}</h3>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <AlertTriangle className="h-4 w-4 text-orange-500" />
-            <span>Critical Gaps</span>
+            <span>Lacunas Críticas</span>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@ export function KnowledgeGapCard({ gap, onAction }: KnowledgeGapCardProps) {
       </div>
 
       <Button variant="outline" size="sm" onClick={() => onAction(gap)} className="w-full">
-        Generate Lesson Plan
+        Gerar Plano de Aula
       </Button>
     </motion.div>
   );

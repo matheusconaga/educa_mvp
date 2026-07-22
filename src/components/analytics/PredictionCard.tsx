@@ -49,7 +49,7 @@ export function PredictionCard({ prediction, onAction }: PredictionCardProps) {
           <div className="flex items-center gap-2 mb-2">
             <TrendingUp className="h-4 w-4 text-muted-foreground" />
             <span className="text-sm text-muted-foreground">
-              Probability: <span className="font-semibold text-foreground">{prediction.probability}%</span>
+              Probabilidade: <span className="font-semibold text-foreground">{prediction.probability}%</span>
             </span>
           </div>
         </div>
@@ -58,12 +58,12 @@ export function PredictionCard({ prediction, onAction }: PredictionCardProps) {
 
       <div className="p-3 rounded-xl bg-card/50 mb-3">
         <p className="text-sm text-muted-foreground">
-          <span className="font-medium text-foreground">Recommendation:</span> {prediction.recommendation}
+          <span className="font-medium text-foreground">Recomendação:</span> {prediction.recommendation}
         </p>
       </div>
 
       <Button variant="outline" size="sm" onClick={() => onAction(prediction)} className="w-full">
-        Take Action
+        Tomar Ação
       </Button>
     </motion.div>
   );

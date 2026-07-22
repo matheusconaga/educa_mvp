@@ -37,17 +37,17 @@ export function TopicMastery({ topics, onAction }: TopicMasteryProps) {
   const getActionButtonLabel = (action: TopicMastery["recommendedAction"]) => {
     switch (action) {
       case "generate-reinforcement-lesson":
-        return "Generate Reinforcement Lesson";
+        return "Gerar Aula de Reforço";
       case "generate-practice-activity":
-        return "Generate Practice Activity";
+        return "Gerar Atividade de Prática";
       case "generate-assessment":
-        return "Generate Assessment";
+        return "Gerar Avaliação";
     }
   };
 
   return (
     <div className="rounded-3xl border border-border bg-card p-6 shadow-md">
-      <h2 className="text-xl font-bold text-foreground mb-6">Topic Mastery</h2>
+      <h2 className="text-xl font-bold text-foreground mb-6">Domínio de Tópicos</h2>
       <div className="space-y-4">
         {topics.map((topic, index) => (
           <motion.div
@@ -65,14 +65,14 @@ export function TopicMastery({ topics, onAction }: TopicMasteryProps) {
                     "px-2 py-0.5 rounded-full text-xs font-medium border",
                     getDifficultyColor(topic.difficultyLevel)
                   )}>
-                    {topic.difficultyPercentage}% struggled
+                    {topic.difficultyPercentage}% tiveram dificuldade
                   </span>
                   {topic.difficultyLevel === "critical" && (
                     <AlertTriangle className="h-4 w-4 text-red-500" />
                   )}
                 </div>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <span>{topic.affectedClasses.length} classes affected</span>
+                  <span>{topic.affectedClasses.length} turmas afetadas</span>
                   <span>{topic.studentsAffected} students</span>
                   <div className="flex items-center gap-1">
                     {getTrendIcon(topic.trend)}

@@ -101,7 +101,7 @@ export function FileUpload({ onFileSelect, selectedFile, onClear }: FileUploadPr
           <div className="flex items-center gap-2">
             <Button variant="outline" size="sm" onClick={handleReplace}>
               <RefreshCw className="h-4 w-4 mr-2" />
-              Replace
+              Substituir
             </Button>
             <Button variant="ghost" size="sm" onClick={onClear}>
               <X className="h-4 w-4" />
@@ -129,10 +129,10 @@ export function FileUpload({ onFileSelect, selectedFile, onClear }: FileUploadPr
         </div>
         <div className="space-y-2">
           <p className="text-lg font-medium text-foreground">
-            Drag & drop your document here
+            Arraste e solte seu documento aqui
           </p>
           <p className="text-sm text-muted-foreground">
-            or click to browse files
+            ou clique para procurar arquivos
           </p>
         </div>
         <input
@@ -146,7 +146,7 @@ export function FileUpload({ onFileSelect, selectedFile, onClear }: FileUploadPr
        
         <div className="space-y-2 ">
           <div className="text-sm text-muted-foreground">
-            <p className="font-medium mb-1">Supported formats:</p>
+            <p className="font-medium mb-1">Formatos suportados:</p>
             <div className="flex items-center justify-center gap-4">
               <span className="flex items-center gap-1">
                 <File className="h-4 w-4" />
@@ -159,7 +159,7 @@ export function FileUpload({ onFileSelect, selectedFile, onClear }: FileUploadPr
             </div>
           </div>
           <p className="text-xs text-muted-foreground">
-            Maximum file size: 10 MB
+            Tamanho máximo: 10 MB
           </p>
         </div>
       </div>

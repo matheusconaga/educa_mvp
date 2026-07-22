@@ -30,7 +30,7 @@ export default function Dashboard() {
   if (!analytics) {
     return (
       <div className="flex items-center justify-center h-64">
-        <p className="text-muted-foreground">Loading dashboard...</p>
+        <p className="text-muted-foreground">Carregando dashboard...</p>
       </div>
     );
   }
@@ -48,9 +48,9 @@ export default function Dashboard() {
       id: cls.id,
       name: cls.name,
       students: cls.students,
-      recentActivity: "2 hours ago",
+      recentActivity: "2 horas atrás",
       progress: levelToNumber[cls.averageLevel] || 50,
-      criticalTopic: cls.difficulties[0] || "None",
+      criticalTopic: cls.difficulties[0] || "Nenhum",
       severity,
     };
   });
@@ -60,37 +60,37 @@ export default function Dashboard() {
     {
       id: "1",
       type: "upload",
-      title: "Annual Planning.pdf",
-      timestamp: "2 hours ago",
-      status: "Completed",
+      title: "Planejamento Anual.pdf",
+      timestamp: "2 horas atrás",
+      status: "Concluído",
     },
     {
       id: "2",
       type: "lesson",
-      title: "Introduction to Fractions",
-      timestamp: "5 hours ago",
-      status: "Completed",
+      title: "Introdução a Frações",
+      timestamp: "5 horas atrás",
+      status: "Concluído",
     },
     {
       id: "3",
       type: "activity",
-      title: "Fraction Practice Quiz",
-      timestamp: "Yesterday",
-      status: "In Progress",
+      title: "Quiz de Prática de Frações",
+      timestamp: "Ontem",
+      status: "Em Andamento",
     },
     {
       id: "4",
       type: "analysis",
-      title: "Math Curriculum Analysis",
-      timestamp: "2 days ago",
-      status: "Completed",
+      title: "Análise do Currículo de Matemática",
+      timestamp: "2 dias atrás",
+      status: "Concluído",
     },
     {
       id: "5",
       type: "error",
-      title: "Failed to upload Curriculum.pdf",
-      timestamp: "3 days ago",
-      status: "Failed",
+      title: "Falha ao enviar Currículo.pdf",
+      timestamp: "3 dias atrás",
+      status: "Falhou",
     },
   ];
 
@@ -113,54 +113,54 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         <StatCard
           icon={<BookOpen />}
-          title="Total Classes"
+          title="Total de Turmas"
           value={analytics.totalClasses}
-          change="+2 this month"
+          change="+2 este mês"
           changeType="positive"
           size="md"
         />
 
         <StatCard
           icon={<FileText />}
-          title="Documents"
+          title="Documentos"
           value={analytics.totalDocuments}
-          change="+5 this week"
+          change="+5 esta semana"
           changeType="positive"
           size="md"
         />
 
         <StatCard
           icon={<ClipboardList />}
-          title="Lesson Plans"
+          title="Planos de Aula"
           value={analytics.lessonPlans}
-          change="+3 this week"
+          change="+3 esta semana"
           changeType="positive"
           size="md"
         />
 
         <StatCard
           icon={<Sparkles />}
-          title="Activities"
+          title="Atividades"
           value={analytics.generatedActivities}
-          change="+8 this week"
+          change="+8 esta semana"
           changeType="positive"
           size="md"
         />
 
         <StatCard
           icon={<Clock />}
-          title="Hours Saved"
+          title="Horas Economizadas"
           value={analytics.hoursSaved}
-          change="This month"
+          change="Este mês"
           changeType="neutral"
           size="md"
         />
 
         <StatCard
           icon={<TrendingUp />}
-          title="Avg Performance"
+          title="Desempenho Médio"
           value={`${analytics.averagePerformance}%`}
-          change="+5% vs last month"
+          change="+5% vs mês anterior"
           changeType="positive"
           size="md"
         />
@@ -169,26 +169,26 @@ export default function Dashboard() {
       {/* Quick Actions */}
       <div>
         <h2 className="mb-4 text-2xl font-bold text-foreground">
-          Quick Actions
+          Ações Rápidas
         </h2>
 
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
 
           <QuickActionButton
             icon={<Plus />}
-            label="Generate Lesson Plan"
+            label="Gerar Plano de Aula"
             variant="primary"
           />
 
           <QuickActionButton
             icon={<Sparkles />}
-            label="Create Activity"
+            label="Criar Atividade"
             variant="outline"
           />
 
           <QuickActionButton
             icon={<BookOpen />}
-            label="View All Classes"
+            label="Ver Todas as Turmas"
             variant="outline"
           />
         </div>
@@ -212,62 +212,62 @@ export default function Dashboard() {
       <div>
         <div className="mb-4">
           <h2 className="text-2xl font-bold text-foreground">
-            AI Insights
+            Insights da IA
           </h2>
 
           <p className="text-sm text-muted-foreground mt-1">
-            Personalized recommendations generated from your classes and recent activities.
+            Recomendações personalizadas geradas a partir das suas turmas e atividades recentes.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           <AIInsightCard
             icon={TrendingUp}
-            title="Performance Trend"
-            message="Your students improved 12% this month."
+            title="Tendência de Desempenho"
+            message="Seus alunos melhoraram 12% este mês."
             severity="positive"
           />
 
           <AIInsightCard
             icon={Clock}
-            title="Time Optimization"
-            message="You saved 24 hours using AI."
+            title="Otimização de Tempo"
+            message="Você economizou 24 horas usando IA."
             severity="positive"
           />
 
           <AIInsightCard
             icon={AlertTriangle}
-            title="Warning"
-            message="45% of students struggled with Fractions."
+            title="Atenção"
+            message="45% dos alunos tiveram dificuldade com Frações."
             severity="warning"
             action={{
-              label: "Generate remedial activity",
+              label: "Gerar atividade de reforço",
               onClick: () => { },
             }}
           />
 
           <AIInsightCard
             icon={AlertTriangle}
-            title="Critical"
-            message="Three students have not completed the latest assessment."
+            title="Crítico"
+            message="Três alunos não concluíram a última avaliação."
             severity="critical"
             action={{
-              label: "Review students",
+              label: "Revisar alunos",
               onClick: () => { },
             }}
           />
 
           <AIInsightCard
             icon={CheckCircle}
-            title="Class Milestone"
-            message="9th Grade reached 80% overall progress this week."
+            title="Marco da Turma"
+            message="A 9ª série atingiu 80% de progresso geral esta semana."
             severity="positive"
           />
 
           <AIInsightCard
             icon={BookOpen}
-            title="Recommendation"
-            message="Consider introducing algebraic concepts to your advanced students."
+            title="Recomendação"
+            message="Considere introduzir conceitos algébricos para seus alunos avançados."
             severity="warning"
           />
         </div>

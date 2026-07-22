@@ -15,23 +15,23 @@ interface AssessmentProgressProps {
 }
 
 const stepLabels: Record<GenerationStep, string> = {
-  analyzing: "Analyzing curriculum...",
-  strategy: "Selecting assessment strategy...",
-  generating: "Generating questions...",
-  balancing: "Balancing difficulty...",
-  answerKey: "Preparing answer key...",
-  finalizing: "Finalizing document...",
-  completed: "Completed",
+  analyzing: "Analisando currículo...",
+  strategy: "Selecionando estratégia de avaliação...",
+  generating: "Gerando questões...",
+  balancing: "Equilibrando dificuldade...",
+  answerKey: "Preparando gabarito...",
+  finalizing: "Finalizando documento...",
+  completed: "Concluído",
 };
 
 const stepDescriptions: Record<GenerationStep, string> = {
-  analyzing: "Analyzing your curriculum requirements and learning objectives",
-  strategy: "Selecting the best assessment strategy for your needs",
-  generating: "Creating questions tailored to your specifications",
-  balancing: "Balancing question difficulty and distribution",
-  answerKey: "Preparing comprehensive answer key and rubrics",
-  finalizing: "Finalizing your complete assessment document",
-  completed: "Your assessment has been successfully generated",
+  analyzing: "Analisando seus requisitos de currículo e objetivos de aprendizagem",
+  strategy: "Selecionando a melhor estratégia de avaliação para suas necessidades",
+  generating: "Criando questões personalizadas para suas especificações",
+  balancing: "Equilibrando dificuldade e distribuição das questões",
+  answerKey: "Preparando gabarito completo e rubricas",
+  finalizing: "Finalizando seu documento de avaliação completo",
+  completed: "Sua avaliação foi gerada com sucesso",
 };
 
 export function AssessmentProgress({ currentStep, progress }: AssessmentProgressProps) {

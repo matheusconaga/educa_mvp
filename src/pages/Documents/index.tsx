@@ -72,7 +72,7 @@ export default function Documents() {
               <ArrowLeft className="h-4 w-4" />
             </Button>
           </Link>
-          <h1 className="text-4xl font-bold text-foreground">Uploading Document</h1>
+          <h1 className="text-4xl font-bold text-foreground">Enviando Documento</h1>
         </div>
         <UploadProgress currentStep={currentStep} progress={progress} />
       </div>
@@ -83,16 +83,12 @@ export default function Documents() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <Link to="/dashboard">
-            <Button variant="ghost" size="sm">
-              <ArrowLeft className="h-4 w-4" />
-            </Button>
-          </Link>
-          <h1 className="text-4xl font-bold text-foreground">Documents</h1>
+          
+          <h1 className="text-4xl font-bold text-foreground">Documentos</h1>
         </div>
         {!showUpload && (
           <Button variant="primary" onClick={() => setShowUpload(true)}>
-            Upload New Document
+            Enviar Novo Documento
           </Button>
         )}
       </div>
@@ -108,7 +104,7 @@ export default function Documents() {
             {selectedFile && (
               <div className="flex justify-end">
                 <Button variant="primary" onClick={handleUpload}>
-                  Upload & Analyze
+                  Enviar e Analisar
                 </Button>
               </div>
             )}

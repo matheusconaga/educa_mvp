@@ -9,7 +9,7 @@ interface TeachingStrategyAnalysisProps {
 export function TeachingStrategyAnalysis({ strategies }: TeachingStrategyAnalysisProps) {
   return (
     <div className="rounded-3xl border border-border bg-card p-6 shadow-md">
-      <h2 className="text-xl font-bold text-foreground mb-6">Teaching Strategy Analysis</h2>
+      <h2 className="text-xl font-bold text-foreground mb-6">Análise de Estratégias de Ensino</h2>
       <div className="space-y-4">
         {strategies.map((strategy, index) => (
           <motion.div
@@ -28,21 +28,21 @@ export function TeachingStrategyAnalysis({ strategies }: TeachingStrategyAnalysi
               <div className="flex items-center gap-2">
                 <TrendingUp className="h-4 w-4 text-muted-foreground" />
                 <div>
-                  <p className="text-xs text-muted-foreground">Performance</p>
+                  <p className="text-xs text-muted-foreground">Desempenho</p>
                   <p className="text-sm font-semibold text-foreground">{strategy.averagePerformance}%</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4 text-muted-foreground" />
                 <div>
-                  <p className="text-xs text-muted-foreground">Engagement</p>
+                  <p className="text-xs text-muted-foreground">Engajamento</p>
                   <p className="text-sm font-semibold text-foreground">{strategy.engagement}%</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <Brain className="h-4 w-4 text-muted-foreground" />
                 <div>
-                  <p className="text-xs text-muted-foreground">Retention</p>
+                  <p className="text-xs text-muted-foreground">Retenção</p>
                   <p className="text-sm font-semibold text-foreground">{strategy.retention}%</p>
                 </div>
               </div>
